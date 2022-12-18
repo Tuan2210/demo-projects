@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,900italic,900,700italic,700,500italic,500,400italic,300italic,300,100italic,100");
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto';
+    background: #151515;
+}
+
+#cayDao img {
+    margin-top: -30%;
+    height: 15%;
+    width: 15%;
+}
+
+#cayMai img {
+    margin-top: -13%;
+    margin-left: 83%;
+    height: 17%;
+    width: 17%;
+}
+
+.loading {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text {
+    font-size: 70px;
+    font-weight: 400;
+    text-align: center;
+    color: #999;
+    margin-bottom: 25px;
+}
+
+.add {
+    animation: animate .9s ease-in-out infinite;
+}
+
+@keyframes animate {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.progress-bar {
+    width: 406px;
+    height: 22px;
+    background: #111;
+    border-radius: 13px;
+    padding: 3px;
+    box-sizing: border-box;
+    margin-bottom: 10%;
+}
+
+.progress {
+    width: 203px;
+    height: 20px;
+    background: #f60d54;
+    border-radius: 13px;
+}
+
+.percent {
+    position: absolute;
+    left: 187px;
+    color: #fdb5ca;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 23px;
+}
+
+#tiger img {
+    width: 8%;
+    height: 14%;
+    margin-top: 12%;
+    margin-left: 66.5%;
+}
+
+#buffalo img {
+    width: 7.5%;
+    height: 8%;
+    margin-top: -9.5%;
+    margin-left: 26%;
+    transform: rotateY(180deg);
+}
+
+a {
+    margin-left: 39%;
+    color: #f60d54;
+    animation: fadein 6s linear forwards;
+}
+
+@keyframes fadein {
+    0%,
+    91% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+a:hover {
+    color: cyan;
+}
