@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* prevent highlight */
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+body {
+    min-height: 100vh;
+    background: #000;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.kamui-gif {
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-kamui {
+    position: absolute;
+    width: 200vw;
+    height: 200vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: kamui_effect 5s linear infinite;
+    /* margin-top: -5%; */
+}
+
+@keyframes kamui_effect {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+.bg-kamui span {
+    position: absolute;
+    width: 500px;
+    height: 150vh;
+    /* background: #f00; */
+    /* border: 2px solid #000; */
+    transform: translate(-50%, -50%) rotate(calc(30deg * var(--i)));
+    transform-origin: bottom right;
+}
+
+.bg-kamui span::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-bottom-left-radius: 500px;
+    box-shadow: -90px -90px 0 89.50px gray;
+}
+
+.bg-kamui span:nth-child(even):before {
+    box-shadow: -90px -90px 0 89.50px lightgray;
+}
