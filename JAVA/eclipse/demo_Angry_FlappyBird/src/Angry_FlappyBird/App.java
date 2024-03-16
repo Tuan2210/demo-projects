@@ -423,7 +423,7 @@ public class App implements ActionListener, KeyListener, WindowListener { //adde
 		if(score==100) {
 			barriers.clear();
 			win = true;
-			if(win==true) {
+			if(win) {
 				bird1.x = bird1.y = -45;
 				
 				lblMemeGlasses=new JLabel("");
@@ -451,12 +451,18 @@ public class App implements ActionListener, KeyListener, WindowListener { //adde
 				//gta thug life sound
 				//link download: http://jacomp3player.sourceforge.net/download.html
 				MP3Player mp3GTA = new MP3Player(new File("images\\[MP3DOWNLOAD.TO] GTA San Andreas - Mission passed sound-320k.mp3"));
-				long milis = System.currentTimeMillis();
-				int nowSeconds = (int) ((milis - this.createdMillis) / 1000);
-				if(nowSeconds<=4) 
-					mp3GTA.play(); //play in 7s
-				else
-					mp3GTA.stop();
+				mp3GTA.play(); //play in 7s
+
+				if(!mp3GTA.isPaused() && !mp3GTA.isStopped() && win && score==100) {
+					long milis = System.currentTimeMillis();
+					int nowSeconds = (int) ((milis - this.createdMillis) / 1000);
+					
+//					System.out.println("is playing mp3");
+					if(nowSeconds>4) {
+						mp3GTA.stop();				
+					}
+				}
+//				if(mp3GTA.isStopped()) System.out.println("stopped");
 			}
 		}
 	}
