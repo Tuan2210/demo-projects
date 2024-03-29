@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="demo_Angry_Flappy_Bird:jar">
+    <output-path>$USER_HOME$/Desktop</output-path>
+    <root id="archive" name="demo_Angry_Flappy_Bird.jar">
+      <element id="module-output" name="demo_Angry_Flappy_Bird" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../libs/jaco-mp3-player-0.9.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../libs/flatlaf-3.4.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
