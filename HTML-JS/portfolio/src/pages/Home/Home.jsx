@@ -1,15 +1,18 @@
 import React from "react";
 
+import Header from "../../layouts/Header/Header";
+
 import IMAGES from "../../assets/imgs";
 
-import styles from "../../components/styles/Home.module.scss"
+// import styles from "../../components/styles/Home.module.scss"
+import { HomeStyle } from "../../components/styles";
 import classNames from "classnames/bind";
 
 // https://react-type-animation.netlify.app
 // https://github.com/maxeth/react-type-animation
 import { TypeAnimation } from 'react-type-animation';
 
-const cx = classNames.bind(styles);
+const cx = classNames.bind(HomeStyle);
 
 export default function Home() {
   return (
@@ -31,10 +34,8 @@ export default function Home() {
           cursor={false}
         />
       </section>
-      <section className={cx(["portfolio-container", "relative mt-[47%] overflow-hidden pb-[2%]"])}>
-        <div>
-          
-        </div>
+      <section className={cx(["portfolio-container", "relative overflow-hidden"])}>
+        <Header />
       </section>
     </div>
   )
