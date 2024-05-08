@@ -29,7 +29,7 @@ export default function Home() {
         <TypeAnimation 
           className={cx(["lblWelcome", "absolute z-[1] top-[50%] left-[50%] text-6xl"])} 
           sequence={['Welcome!', 0]}
-          speed={10}
+          speed={20}
           repeat={0}
           cursor={false}
         />
