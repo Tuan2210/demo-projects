@@ -1,7 +1,11 @@
+// Quicksand
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Quicksand:wght@300..700&display=swap');
 // Bungee
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
 // Monoton
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+// Mochiy Pop One
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Monoton&family=Quicksand:wght@300..700&display=swap');
 $bg_color: #070C1F;
 * {
     margin: 0;
@@ -18,7 +22,7 @@ body {
     min-height: 100dvh;
     overflow-y: scroll;
     overflow-x: hidden;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-size: 1rem;
     // cursor: default;
     background: #070C1F;

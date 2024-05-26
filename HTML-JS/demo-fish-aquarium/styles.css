@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #001f3f;
+}
+
+.aquarium {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #0077be, #001f3f);
+}
+
+.fish {
+    position: absolute;
+    width: 50px;
+    height: 30px;
+    background-color: orange;
+    border-radius: 50%;
+}
+
+.fish1 {
+    animation: swim1 10s linear infinite;
+}
+
+.fish2 {
+    animation: swim2 8s linear infinite;
+}
+
+.fish3 {
+    animation: swim3 12s linear infinite;
+}
+
+.bubble {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    bottom: -40px;
+}
+
+.bubble1 {
+    left: 20%;
+    animation: rise 4s linear infinite;
+}
+
+.bubble2 {
+    left: 50%;
+    animation: rise 6s linear infinite;
+}
+
+.bubble3 {
+    left: 80%;
+    animation: rise 5s linear infinite;
+}
+
+@keyframes swim1 {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(100px, -50px);
+    }
+    50% {
+        transform: translate(200px, 0);
+    }
+    75% {
+        transform: translate(100px, 50px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes swim2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(150px, 50px);
+    }
+    50% {
+        transform: translate(300px, 0);
+    }
+    75% {
+        transform: translate(150px, -50px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes swim3 {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(200px, -50px);
+    }
+    50% {
+        transform: translate(400px, 0);
+    }
+    75% {
+        transform: translate(200px, 50px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes rise {
+    0% {
+        bottom: -40px;
+        opacity: 1;
+    }
+    100% {
+        bottom: 100%;
+        opacity: 0;
+    }
+}

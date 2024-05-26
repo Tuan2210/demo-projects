@@ -1,8 +1,9 @@
 import React from "react";
 
-import Header from "../../layouts/Header/Header";
+import {Header, Content} from "../../layouts"
+import {FishTank} from '../../components/ui'
 
-import IMAGES from "../../assets/imgs";
+import IMAGES from "../../constants/imgUrl";
 
 // import styles from "../../components/styles/Home.module.scss"
 import { HomeStyle } from "../../components/styles";
@@ -11,14 +12,15 @@ import classNames from "classnames/bind";
 // https://react-type-animation.netlify.app
 // https://github.com/maxeth/react-type-animation
 import { TypeAnimation } from 'react-type-animation';
+// import FishTank from "../../components/ui/FishTank/FishTank";
 
 const cx = classNames.bind(HomeStyle);
 
 export default function Home() {
   return (
     <div>
-      <section className={cx(["parallax", "relative overflow-hidden z-0"])}>
-        <img src={IMAGES.night_skyy} alt="night-sky" className={cx(["sky", ""])} />
+      <div className={cx(["parallax", "relative overflow-hidden z-0"])}>
+        <img src={IMAGES.night_sky} alt="night-sky" className={cx(["sky", ""])} />
         <img src={IMAGES.stars} alt="stars1" className={cx(["stars1", "left-[-50%]"])} />
         <img src={IMAGES.stars} alt="stars2" className={cx(["stars2", "left=[50%]"])} />
         <img src={IMAGES.moon} alt="moon" className={cx(["moon", "mix-blend-screen"])} />
@@ -33,10 +35,12 @@ export default function Home() {
           repeat={0}
           cursor={false}
         />
-      </section>
-      <section className={cx(["portfolio-container", "relative overflow-hidden"])}>
+      </div>
+      <div className={cx(["portfolio-container", "relative overflow-hidden"])}>
+        <FishTank />
         <Header />
-      </section>
+        <Content />
+      </div>
     </div>
   )
 }

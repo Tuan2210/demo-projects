@@ -19,21 +19,21 @@ export default function Header() {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
-      setAnchorEl(event.currentTarget);
+    setAnchorEl(event.currentTarget);
   };
   const handleClose = () => {
-      setAnchorEl(null);
+    setAnchorEl(null);
   };
 
-  return ( 
-    <div className="flex justify-around gap-[40%]">
+  return (
+    <header className="flex justify-around gap-[40%] p-2 mb-4 flex-grow">
       <div className={cx(["tuanTitle", "text-[cyan] text-5xl"])}>
-        T 
-        <span className="text-white text-3xl">uan</span> 
-      </div> 
-      <div className="flex gap-16"> 
-        {menuList.map((item, index) => ( 
-          <button 
+        T
+        <span className="text-white text-3xl">uan</span>
+      </div>
+      <div className={cx(["menuHeader", "flex gap-16"])}>
+        {menuList.map((item, index) => (
+          <button
             key={index}
             id="basic-button"
             // aria-controls={open ? 'basic-menu' : undefined}
@@ -42,10 +42,10 @@ export default function Header() {
             className={cx(["menuItem", "text-[cyan] text-lg"])}
             onClick={handleClick}
           >
-            {item} 
+            {item}
           </button>
-        ))} 
-      </div> 
-    </div>
+        ))}
+      </div>
+    </header>
   )
 }

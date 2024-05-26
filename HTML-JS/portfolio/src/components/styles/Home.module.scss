@@ -49,6 +49,42 @@
 }
 
 .portfolio-container {
-    background-color: $bg_color;
     max-width: 100%;
+    .fstSection {
+        background: linear-gradient(to bottom, $bg_color, #000);
+        .hiTxt {
+            font-family: "Mochiy Pop One", sans-serif;
+        }
+    }
 }
+
+@media screen and (max-width: 360px) {
+    .parallax {
+        .lblWelcome {
+            font-size: 1.3rem;
+            margin-top: -10%;
+        }
+        .moon {
+            height: 60%;
+            margin-top: 10%;
+        }
+    }
+    .portfolio-container {
+        header {
+            flex-direction: column;
+            .tuanTitle {
+                // display: none;
+                // background-color: red;
+                // font-size: 1rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {}
+
+@media screen and (max-width: 768px) {}
+
+@media screen and (max-width: 992px) {}
+
+@media screen and (max-width: 1200px) {}
