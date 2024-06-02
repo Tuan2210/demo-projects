@@ -2,11 +2,15 @@ import React, { useEffect } from "react";
 
 import IMAGES from "../../constants/imgUrl";
 
+import { FishTank } from "../../components/ui";
+
 import { HomeStyle } from "../../components/styles";
-import classNames from "classnames/bind";
+
+import styled from "styled-components";
 
 import { TypeAnimation } from "react-type-animation";
 
+import classNames from "classnames/bind";
 const cx = classNames.bind(HomeStyle);
 
 export default function Content() {
@@ -15,10 +19,11 @@ export default function Content() {
       console.log('scrollY: ', window.scrollY);
     });
   }, [])
+
   return (
-    <div className="text-white bg-black">
+    <FishTank>
       {/* 1st section */}
-      <section className={cx(["fstSection", "grid grid-cols-[auto_35%]"])}>
+      <section className={cx(["fstSection", "w-full h-[500px] grid grid-cols-[auto_35%]"])}>
         <div className="w-full flex flex-col justify-center items-center gap-5">
           <div className={cx(["hiTxt", "text-[4rem] text-center"])}>
             Hi, I'm 
@@ -45,14 +50,15 @@ export default function Content() {
           <img src={IMAGES.avatar} alt="avatar" />
         </div>
       </section>
-
+      
       {/* 2nd section */}
-      <section className={cx(["sndSection", "grid grid-cols-[35%_auto]"])}>
+      <section className={cx(["sndSection", "grid grid-cols-[35%_auto] bg-[red]"])}>
         <div className="w-full flex items-center justify-center">
-
+          <div className="text-white">HELLO</div>
         </div>
         <div className="w-full flex flex-col justify-center items-center"></div>
       </section>
-    </div>
+
+    </FishTank>
   )
 }

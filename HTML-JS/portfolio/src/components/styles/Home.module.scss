@@ -52,9 +52,15 @@
     max-width: 100%;
     .fstSection {
         background: linear-gradient(to bottom, $bg_color, #000);
+        // background-color: rgba(0, 0, 0, 0.5);
+        // opacity: 0.5;
         .hiTxt {
             font-family: "Mochiy Pop One", sans-serif;
         }
+    }
+    .sndSection {
+        // background-color: rgba(0, 0, 0, 0.5);
+        // opacity: 0.5;
     }
 }
 

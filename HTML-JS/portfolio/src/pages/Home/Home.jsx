@@ -1,7 +1,6 @@
 import React from "react";
 
 import {Header, Content} from "../../layouts"
-import {FishTank} from '../../components/ui'
 
 import IMAGES from "../../constants/imgUrl";
 
@@ -12,7 +11,6 @@ import classNames from "classnames/bind";
 // https://react-type-animation.netlify.app
 // https://github.com/maxeth/react-type-animation
 import { TypeAnimation } from 'react-type-animation';
-// import FishTank from "../../components/ui/FishTank/FishTank";
 
 const cx = classNames.bind(HomeStyle);
 
@@ -37,7 +35,6 @@ export default function Home() {
         />
       </div>
       <div className={cx(["portfolio-container", "relative overflow-hidden"])}>
-        <FishTank />
         <Header />
         <Content />
       </div>

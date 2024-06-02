@@ -26,7 +26,7 @@ export default function Header() {
   };
 
   return (
-    <header className="flex justify-around gap-[40%] p-2 mb-4 flex-grow">
+    <header className="flex justify-around gap-[40%] p-2 flex-grow">
       <div className={cx(["tuanTitle", "text-[cyan] text-5xl"])}>
         T
         <span className="text-white text-3xl">uan</span>
