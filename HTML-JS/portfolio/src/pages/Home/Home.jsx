@@ -1,11 +1,11 @@
 import React from "react";
 
-import {Header, Content} from "../../layouts"
+import { Header, Content } from "@layouts"
 
-import IMAGES from "../../constants/imgUrl";
+import IMAGES from "@constants/imgUrl";
 
-// import styles from "../../components/styles/Home.module.scss"
-import { HomeStyle } from "../../components/styles";
+// import styles from "@components/styles/Home.module.scss"
+import { HomeStyle } from "@components/styles";
 import classNames from "classnames/bind";
 
 // https://react-type-animation.netlify.app
@@ -26,8 +26,8 @@ export default function Home() {
         <img src={IMAGES.flying_bird2} alt="bird2" className={cx(["bird2", ""])} />
         <img src={IMAGES.flying_bird2} alt="bird3" className={cx(["bird3", ""])} />
         <img src={IMAGES.night_sea} alt="night-sea" className={cx(["sea", ""])} />
-        <TypeAnimation 
-          className={cx(["lblWelcome", "absolute z-[1] top-[50%] left-[50%] text-6xl"])} 
+        <TypeAnimation
+          className={cx(["lblWelcome", "absolute z-[1] top-[50%] left-[50%] text-6xl"])}
           sequence={['Welcome!', 0]}
           speed={20}
           repeat={0}

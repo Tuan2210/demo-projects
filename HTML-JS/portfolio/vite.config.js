@@ -1,7 +1,10 @@
+/* eslint-disable no-undef */
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 import fs from "fs/promises";
+
+import { resolve } from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -15,6 +18,10 @@ export default defineConfig({
   },
   optimizeDeps: {
     esbuildOptions: {
+      loader: {
+        ".js": "jsx",
+        ".jsx": "jsx",
+      },
       plugins: [
         {
           name: "load-js-files-as-jsx",
@@ -26,6 +33,15 @@ export default defineConfig({
           },
         },
       ],
+    },
+  },
+  resolve: {
+    alias: {
+      "@components": resolve(__dirname, "./src/components"),
+      '@constants': resolve(__dirname, 'src/constants'),
+      "@layouts": resolve(__dirname, "./src/layouts"),
+      "@pages": resolve(__dirname, "./src/pages"),
+      "@routes": resolve(__dirname, "./src/routes"),
     },
   },
   // server: {

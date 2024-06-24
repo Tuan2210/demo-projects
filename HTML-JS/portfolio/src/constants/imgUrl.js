@@ -7,6 +7,7 @@ const IMAGES = {
   flying_bird2: assetsImgages + "flying-bird-2.gif",
   night_sea: assetsImgages + "night-sea.png",
   avatar: assetsImgages + "DinhQuangTuan.png",
+  dev: assetsImgages + "dev.png",
 };
 
 export default IMAGES;

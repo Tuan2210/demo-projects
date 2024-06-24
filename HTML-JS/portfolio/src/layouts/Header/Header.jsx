@@ -5,7 +5,7 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 
-import { HeaderStyle } from "../../components/styles";
+import { HeaderStyle } from "@components/styles";
 import classNames from "classnames/bind";
 
 const cx = classNames.bind(HeaderStyle);

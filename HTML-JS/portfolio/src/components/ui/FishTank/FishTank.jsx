@@ -8,7 +8,7 @@ const FishTank = ({ children }) => {
 
   // handle bubbles
   useEffect(() => {
-    const bubbleCount = 15;
+    const bubbleCount = 12;
     const bubbleField = document.getElementsByClassName("bubble-field")[0];
 
     // generate bubbles with randomly animation
@@ -30,9 +30,10 @@ const FishTank = ({ children }) => {
   }, []);
 
   return (
-    <StyledFishTank className='bubble-field text-white bg-black mb-[100%] w-full h-full text-center relative overflow-hidden'>
-      <Fish className="fish absolute left-0 bottom-[75px]" />
-      <Fish className="fish blue-fish absolute left-0 bottom-[225px]" />
+    <StyledFishTank className='bubble-field text-white bg-black mb-[100%] w-full h-full text-center relative overflow-hidden'>      
+      <Fish className="fish yellow-green-fish blue-fish absolute left-0 bottom-[80%]" />
+      <Fish className="fish absolute left-0 bottom-[50%]" />
+      <Fish className="fish blue-fish absolute left-0 bottom-[5px]" />
       { children }
     </StyledFishTank>
   )
@@ -66,11 +67,11 @@ const StyledFishTank = styled.div`
 
   .bubble {
       position: relative;
-      box-shadow: 0px 0px 12px 5px inset #fff;
-      -webkit-box-shadow: 0px 0px 12px 5px inset #fff;
-      -moz-box-shadow: 0px 0px 12px 5px inset #fff;
-      -o-box-shadow: 0px 0px 12px 5px inset #fff;
-      -ms-box-shadow: 0px 0px 12px 5px inset #fff;
+      box-shadow: 0px 0px 12px 5px inset lightgray;
+      -webkit-box-shadow: 0px 0px 12px 5px inset lightgray;
+      -moz-box-shadow: 0px 0px 12px 5px inset lightgray;
+      -o-box-shadow: 0px 0px 12px 5px inset lightgray;
+      -ms-box-shadow: 0px 0px 12px 5px inset lightgray;
       border-radius: 50%;
       display: inline-block;
       width: 30px;
@@ -85,7 +86,7 @@ const StyledFishTank = styled.div`
   .bubble:after {
       content: '';
       position: absolute;
-      background-color: white;
+      background-color: lightgray;
       width: 13px;
       height: 8px;
       top: 10%;
@@ -221,11 +222,15 @@ const StyledFishTank = styled.div`
   }
 
   .fish {
-      animation: fish 40s cubic-bezier(0.9, 1, 0.3, 0.75) 0s infinite normal;
+    animation: fish 40s cubic-bezier(0.9, 1, 0.3, 0.75) 0s infinite normal;
   }
 
   .blue-fish {
     animation: fish 25s cubic-bezier(0.7, 1, 0.3, 0.5) 0s infinite normal;
+  }
+
+  .yellow-green-fish {
+    animation: fish 20s cubic-bezier(0.7, 1, 0.3, 0.5) 0s infinite normal;
   }
 
   .fish-body {
@@ -243,6 +248,10 @@ const StyledFishTank = styled.div`
 
   .blue-fish .fish-body {
     background-color: #0098e0;
+  }
+
+  .yellow-green-fish .fish-body {
+    background-color: yellowgreen;
   }
 
   .fish-body:before {
