@@ -95,8 +95,8 @@ export default function Content() {
 
   return (
     <FishTank>
-      {/* 1st section */}
-      <section className={cx(["fstSection", "w-full h-[500px] grid grid-cols-[auto_35%]"])}>
+      {/* 1st section_introduce */}
+      <section className={cx(["fstSection", "w-full grid grid-cols-[auto_35%]"])}>
         {/* left 1st */}
         <div className="w-full flex flex-col justify-center items-center gap-5">
           <div className={cx(["hiTxt", "text-[4rem] text-center"])}>
@@ -126,16 +126,16 @@ export default function Content() {
         </div>
       </section>
 
-      {/* 2nd section */}
+      {/* 2nd section_about */}
       <section className={cx(["sndSection", "grid grid-cols-[30%_auto]"])}>
         {/* left 2nd */}
         <div className="w-full flex items-center justify-center">
           <img src={IMAGES.dev} alt="dev" />
         </div>
         {/* right 2nd */}
-        <div className="w-full flex flex-col text-left gap-5">
+        <div className="w-full h-fit flex flex-col text-left pl-2 pr-2 gap-5">
           <div className="grid grid-cols-4 h-fit gap-2">
-            <div className="col-span-4 text-[cyan] text-[4rem]">About me</div>
+            <div className={cx(["sectionTitle", "col-span-4 text-[cyan] text-[2.5rem]"])}>About me</div>
             <div className="col-span-4 flex flex-col gap-2">
               <div className="flex gap-2">
                 <p>I'm current working on</p>
@@ -184,6 +184,11 @@ export default function Content() {
             </TabPanel>
           </Tabs>
         </div>
+      </section>
+
+      {/* 3rd section_services */}
+      <section className={cx(["trdSection", ""])}>
+        <div className={cx(["sectionTitle", "text-[cyan] text-[2.5rem]"])}>Services</div>
       </section>
 
     </FishTank>

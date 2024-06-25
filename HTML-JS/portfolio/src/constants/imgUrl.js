@@ -8,6 +8,8 @@ const IMAGES = {
   night_sea: assetsImgages + "night-sea.png",
   avatar: assetsImgages + "DinhQuangTuan.png",
   dev: assetsImgages + "dev.png",
+  vnFlag:
+    "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXRscDQ1OW83OXVneWVwaGowdDJuMHJkbWVla2luZzFrc2dwNTR4aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/TEhiYXV8RWPzQVF9sC/giphy.webp",
 };
 
 export default IMAGES;

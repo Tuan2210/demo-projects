@@ -5,6 +5,8 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 
+import IMAGES from "@constants/imgUrl";
+
 import { HeaderStyle } from "@components/styles";
 import classNames from "classnames/bind";
 
@@ -27,10 +29,7 @@ export default function Header() {
 
   return (
     <header className="flex justify-around gap-[40%] p-2 flex-grow">
-      <div className={cx(["tuanTitle", "text-[cyan] text-5xl"])}>
-        T
-        <span className="text-white text-3xl">uan</span>
-      </div>
+      <img src={IMAGES.vnFlag} alt="VN" width={150} />
       <div className={cx(["menuHeader", "flex gap-16"])}>
         {menuList.map((item, index) => (
           <button
