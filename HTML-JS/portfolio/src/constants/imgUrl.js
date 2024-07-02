@@ -1,15 +1,14 @@
-const assetsImgages = "/assets/images/";
+const s3Url = "https://portfolio-dqt.s3.ap-southeast-1.amazonaws.com/";
 const IMAGES = {
-  night_sky: assetsImgages + "night-sky-no-stars.jpg",
-  stars: assetsImgages + "stars.png",
-  moon: assetsImgages + "moon.png",
-  flying_bird1: assetsImgages + "flying-bird-1.gif",
-  flying_bird2: assetsImgages + "flying-bird-2.gif",
-  night_sea: assetsImgages + "night-sea.png",
-  avatar: assetsImgages + "DinhQuangTuan.png",
-  dev: assetsImgages + "dev.png",
-  vnFlag:
-    "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXRscDQ1OW83OXVneWVwaGowdDJuMHJkbWVla2luZzFrc2dwNTR4aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/TEhiYXV8RWPzQVF9sC/giphy.webp",
+  night_sky: s3Url + "night-sky-no-stars.jpg",
+  stars: s3Url + "stars.png",
+  moon: s3Url + "moon.png",
+  flying_bird1: s3Url + "flying-bird-1.gif",
+  flying_bird2: s3Url + "flying-bird-2.gif",
+  night_sea: s3Url + "night-sea.png",
+  avatar: s3Url + "DinhQuangTuan.png",
+  dev: s3Url + "dev.png",
+  vnFlag: s3Url + "vn-flag.gif ",
 };
 
 export default IMAGES;

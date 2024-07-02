@@ -7,8 +7,11 @@ header {
     }
     .menuItem:hover {
         color: darkorange;
-        text-decoration: underline;
     }
+    @media screen and (max-width: 1200px) {}
+    @media screen and (max-width: 992px) {}
+    @media screen and (max-width: 768px) {}
+    @media screen and (max-width: 480px) {}
     @media screen and (max-width: 360px) {
         flex-direction: column;
         .tuanTitle {
@@ -23,8 +26,4 @@ header {
             grid-template-columns: repeat(2, minmax(0, 1fr));
         }
     }
-    @media screen and (max-width: 480px) {}
-    @media screen and (max-width: 768px) {}
-    @media screen and (max-width: 992px) {}
-    @media screen and (max-width: 1200px) {}
 }

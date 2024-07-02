@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Converse Bot\n(on working)",
+    "description": "English learning website that integrates Gemini AI of Google",
+    "image": "https://portfolio-dqt.s3.ap-southeast-1.amazonaws.com/converse-bot-max-w-1400.png",
+    "link": "https://github.com/MaiNhatHoangY2001/converse-bot"
+  },
+  {
+    "name": "TheGioiDien-Clone",
+    "description": "TheGioiDien-Clone is an ecommerce website and a copy of thegioidien.com (FE only and use ReactJS framework)",
+    "image": "https://portfolio-dqt.s3.ap-southeast-1.amazonaws.com/the-gioi-dien-clone-max-w-1400.png",
+    "link": "https://thegioidien-clone.onrender.com/"
+  },
+  {
+    "name": "Task Obey",
+    "description": "Task Obey is a mobile application running on the Android platform, it helps users active to manage their time and quantity of tasks need to be finished effectively. Using React-Native framework",
+    "image": "https://portfolio-dqt.s3.ap-southeast-1.amazonaws.com/demo-task-obey.png",
+    "link": "https://github.com/Tuan2210/N10_KLTN_TaskObey"
+  },
+  {
+    "name": "Bang Blue Birds",
+    "description": "The PC game (Windows Platform) combines Angry Birds and Flappy Bird, design game, handle levels and events, code with Java language",
+    "image": "https://portfolio-dqt.s3.ap-southeast-1.amazonaws.com/bang-blue-birds-beta.png",
+    "link": "https://youtu.be/n1zyvL42Bc8?si=tgQgjE76GoL-DjOk"
+  }
+]

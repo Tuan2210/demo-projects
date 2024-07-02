@@ -15,7 +15,7 @@ const cx = classNames.bind(HeaderStyle);
 export default function Header() {
 
   // menu list
-  const menuList = ['Home', 'About', 'Services', 'Contact']
+  const menuList = ['Home', 'About', 'Projects', 'Contact']
 
   // menu items
   const [anchorEl, setAnchorEl] = useState(null);
@@ -38,7 +38,7 @@ export default function Header() {
             // aria-controls={open ? 'basic-menu' : undefined}
             // aria-haspopup="true"
             // aria-expanded={open ? 'true' : undefined}
-            className={cx(["menuItem", "text-[cyan] text-lg"])}
+            className={cx(["menuItem", "text-[cyan] text-lg outline-0"])}
             onClick={handleClick}
           >
             {item}

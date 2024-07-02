@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 
 import Fish from './Fish'
 
@@ -14,7 +14,7 @@ const FishTank = ({ children }) => {
     // generate bubbles with randomly animation
     for (let i = 0; i < bubbleCount; i++) {
       const randNum = Math.floor(Math.random() * 20) + 1;
-      const animDur = 2 + 0.5 * randNum;
+      const animDur = 6 + 0.5 * randNum;
       const moveEl = document.createElement("div");
       moveEl.setAttribute("class", "bubble-rise");
       moveEl.setAttribute("style", `animation-duration: ${animDur}s;`);
@@ -30,11 +30,11 @@ const FishTank = ({ children }) => {
   }, []);
 
   return (
-    <StyledFishTank className='bubble-field text-white bg-black mb-[100%] w-full h-full text-center relative overflow-hidden'>      
+    <StyledFishTank className='bubble-field text-white bg-black mb-[100%] w-full h-full text-center relative overflow-hidden'>
       <Fish className="fish yellow-green-fish blue-fish absolute left-0 bottom-[80%]" />
       <Fish className="fish absolute left-0 bottom-[50%]" />
       <Fish className="fish blue-fish absolute left-0 bottom-[5px]" />
-      { children }
+      {children}
     </StyledFishTank>
   )
 }
@@ -110,11 +110,11 @@ const StyledFishTank = styled.div`
         -o-transform: translateY(0px); 
       }
       100% { 
-        transform: translateY(-1000px);
-        -webkit-transform: translateY(-1000px);
-        -moz-transform: translateY(-1000px);
-        -ms-transform: translateY(-1000px);
-        -o-transform: translateY(-1000px); 
+        transform: translateY(-2000px);
+        -webkit-transform: translateY(-2000px);
+        -moz-transform: translateY(-2000px);
+        -ms-transform: translateY(-2000px);
+        -o-transform: translateY(-2000px); 
       }
   }
 
@@ -123,7 +123,7 @@ const StyledFishTank = styled.div`
       display: inline-block;
       margin: 15px;
       top: 100%;
-      animation: bubble-rise 2s cubic-bezier(0.3, 0, 0.7, 0.75) 0s infinite normal;
+      animation: bubble-rise 10s cubic-bezier(0.3, 0, 0.7, 0.75) 0s infinite normal;
   }
 
   // fish
