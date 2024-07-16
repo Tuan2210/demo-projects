@@ -9,18 +9,33 @@ header {
         color: darkorange;
     }
     @media screen and (max-width: 1200px) {}
-    @media screen and (max-width: 992px) {}
-    @media screen and (max-width: 768px) {}
-    @media screen and (max-width: 480px) {}
-    @media screen and (max-width: 360px) {
-        flex-direction: column;
-        .tuanTitle {
-            margin: 0 auto;
-            font-size: 2.2rem;
-            span {
-                font-size: 1.5rem;
-            }
+    @media screen and (max-width: 992px) {
+        .vnFlag {
+            width: 7rem;
         }
+    }
+    @media screen and (max-width: 768px) {
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+        .vnFlag {
+            grid-column: span 1 / span 1;
+            width: 6rem;
+        }
+        .menuHeader {
+            grid-column: span 3 / span 3;
+            gap: 5%;
+        }
+    }
+    @media screen and (max-width: 480px) {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        padding: 0 5% 0 5%;
+        .vnFlag {
+            display: none;
+        }
+        .menuHeader {
+            grid-column: span 2 / span 2;
+        }
+    }
+    @media screen and (max-width: 360px) {
         .menuHeader {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));

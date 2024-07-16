@@ -1,4 +1,5 @@
-import Header from "@layouts/Header/Header";
-import Content from "@layouts/Content/Content";
+import Header from "./Header";
+import Main from "./Main";
+import Footer from "./Footer";
 
-export { Header, Content };
+export { Header, Main, Footer };

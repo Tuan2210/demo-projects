@@ -1,0 +1,214 @@
+@import "../GlobalStyles/GlobalStyles.scss";
+main {
+    .sectionTitle {
+        font-family: "Mochiy Pop One", sans-serif;
+    }
+    .fstSection {
+        background: linear-gradient(to bottom, $bg_color, #000);
+        // background-color: rgba(0, 0, 0, 0.5);
+        // opacity: 0.5;
+        .hiTxt {
+            font-family: "Mochiy Pop One", sans-serif;
+        }
+    }
+    @media screen and (max-width: 1200px) {
+        .fstSection {
+            .fstLeft {
+                .hiTxt,
+                span {
+                    font-size: 3.25rem;
+                }
+                .hiTxt~div,
+                .typeTxt {
+                    font-size: 1.75rem;
+                }
+            }
+        }
+        .trdSection {
+            .sectionTitle~div {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+        .fifthSection {
+            // padding: 0 0.5rem 0 0.5rem;
+            // gap: 0.5rem;
+            padding: 0;
+            gap: 0;
+        }
+    }
+    @media screen and (max-width: 992px) {
+        .fstSection {
+            .fstLeft {
+                gap: 0.5rem;
+                padding: 0 2% 0 2%;
+                .hiTxt,
+                span {
+                    font-size: 2.5rem;
+                }
+                .hiTxt~div,
+                .typeTxt {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+        .fifthSection {
+            .sectionTitle~div {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .fstSection {
+            .fstLeft {
+                .hiTxt,
+                span {
+                    font-size: 1.5rem;
+                }
+                .hiTxt~div,
+                .typeTxt {
+                    font-size: 1rem;
+                }
+            }
+            .fstRight img {
+                height: 15rem;
+            }
+        }
+        .sndSection {
+            .sndRight {
+                .sectionTitle {
+                    font-size: 2rem;
+                }
+                .sectionTitle~div {
+                    div p,
+                    div a,
+                    p {
+                        font-size: 1rem;
+                    }
+                }
+                .tab {
+                    font-size: 0.75rem;
+                }
+            }
+        }
+        .fourthSection {
+            .sectionTitle~div {
+                grid-template-columns: 40% auto;
+                .fourthLeft {
+                    p {
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 550px) {
+        // card
+        .trdSection {
+            .sectionTitle~div {
+                grid-template-columns: repeat(1, minmax(0, 1fr));
+            }
+        }
+        .fourthSection {
+            .sectionTitle~div {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                .fourthLeft {
+                    p {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+        .fifthSection {
+            .sectionTitle~div {
+                grid-template-columns: repeat(1, minmax(0, 1fr));
+            }
+        }
+    }
+    @media screen and (max-width: 480px) {
+        .fstSection {
+            padding-top: 5%;
+            .fstLeft {
+                gap: 0;
+                padding: 0 2% 0 2%;
+                .hiTxt,
+                span {
+                    font-size: 1.25rem;
+                }
+                .hiTxt~div,
+                .typeTxt {
+                    font-size: 0.8rem;
+                }
+            }
+            .fstRight {
+                img {
+                    height: 12rem;
+                }
+            }
+        }
+        .sndSection {
+            display: flex;
+            justify-content: center;
+            .sndLeft {
+                display: none;
+            }
+            .sndRight {
+                padding: 0 5% 0 5%;
+                .sectionTitle {
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 360px) {
+        .fstSection {
+            display: flex;
+            flex-direction: column;
+            .fstRight {
+                order: 1;
+                img {
+                    height: 11rem;
+                    padding: 5% 0 5% 0;
+                }
+            }
+            .fstLeft {
+                order: 2;
+                .hiTxt,
+                span {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+        .sndSection {
+            .sndRight {
+                padding-top: 5%;
+                .sectionTitle {
+                    font-size: 1rem;
+                }
+                .sectionTitle~div {
+                    div p,
+                    div a,
+                    p {
+                        font-size: 0.75rem;
+                    }
+                }
+                .tab {
+                    font-size: 0.7rem;
+                }
+                .tabPanelContent {
+                    font-size: 0.75rem;
+                }
+            }
+        }
+        .fourthSection {
+            .sectionTitle~div {
+                .fourthLeft {
+                    p {
+                        font-size: 0.75rem;
+                    }
+                }
+            }
+        }
+    }
+}

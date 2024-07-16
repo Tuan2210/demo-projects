@@ -1,6 +1,8 @@
 import React from "react";
 
-import { Header, Content } from "@layouts"
+import { Header, Main, Footer } from "@layouts"
+
+import useScroll from "@hooks/useScroll";
 
 import IMAGES from "@constants/imgUrl";
 
@@ -15,16 +17,25 @@ import { TypeAnimation } from 'react-type-animation';
 const cx = classNames.bind(HomeStyle);
 
 export default function Home() {
+  const {
+    stars1Ref,
+    stars2Ref,
+    moonRef,
+    bird1Ref,
+    bird2Ref,
+    bird3Ref,
+  } = useScroll();
+
   return (
     <div>
       <div className={cx(["parallax", "relative overflow-hidden z-0"])}>
         <img src={IMAGES.night_sky} alt="night-sky" className={cx(["sky", ""])} />
-        <img src={IMAGES.stars} alt="stars1" className={cx(["stars1", "left-[-50%]"])} />
-        <img src={IMAGES.stars} alt="stars2" className={cx(["stars2", "left=[50%]"])} />
-        <img src={IMAGES.moon} alt="moon" className={cx(["moon", "mix-blend-screen"])} />
-        <img src={IMAGES.flying_bird1} alt="bird1" className={cx(["bird1", ""])} />
-        <img src={IMAGES.flying_bird2} alt="bird2" className={cx(["bird2", ""])} />
-        <img src={IMAGES.flying_bird2} alt="bird3" className={cx(["bird3", ""])} />
+        <img src={IMAGES.stars} alt="stars1" ref={stars1Ref} className={cx(["stars1", "left-[-50%]"])} />
+        <img src={IMAGES.stars} alt="stars2" ref={stars2Ref} className={cx(["stars2", "left-[50%]"])} />
+        <img src={IMAGES.moon} alt="moon" ref={moonRef} className={cx(["moon", "mix-blend-screen object-contain"])} />
+        <img src={IMAGES.flying_bird1} alt="bird1" ref={bird1Ref} className={cx(["bird1", ""])} />
+        <img src={IMAGES.flying_bird2} alt="bird2" ref={bird2Ref} className={cx(["bird2", ""])} />
+        <img src={IMAGES.flying_bird2} alt="bird3" ref={bird3Ref} className={cx(["bird3", ""])} />
         <img src={IMAGES.night_sea} alt="night-sea" className={cx(["sea", ""])} />
         <TypeAnimation
           className={cx(["lblWelcome", "absolute z-[1] top-[50%] left-[50%] text-6xl"])}
@@ -34,9 +45,10 @@ export default function Home() {
           cursor={false}
         />
       </div>
-      <div className={cx(["portfolio-container", "relative overflow-hidden"])}>
+      <div className={cx(["portfolio-container", "relative overflow-hidden max-w-full"])}>
         <Header />
-        <Content />
+        <Main />
+        <Footer />
       </div>
     </div>
   )

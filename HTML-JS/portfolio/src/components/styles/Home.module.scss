@@ -48,52 +48,55 @@
     }
 }
 
-.portfolio-container {
-    max-width: 100%;
-    .sectionTitle {
-        font-family: "Mochiy Pop One", sans-serif;
-    }
-    .fstSection {
-        background: linear-gradient(to bottom, $bg_color, #000);
-        // background-color: rgba(0, 0, 0, 0.5);
-        // opacity: 0.5;
-        .hiTxt {
-            font-family: "Mochiy Pop One", sans-serif;
+.portfolio-container {}
+
+@media screen and (max-width: 1200px) {
+    .parallax {
+        .lblWelcome {
+            font-size: 3rem;
         }
     }
-    .sndSection {
-        // background-color: rgba(0, 0, 0, 0.5);
-        // opacity: 0.5;
+}
+
+@media screen and (max-width: 992px) {
+    .parallax {
+        .lblWelcome {
+            font-size: 2.75rem;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .parallax {
+        img.moon {
+            margin-top: -10%;
+        }
+        .lblWelcome {
+            top: 40%;
+            font-size: 2.5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .parallax {
+        img.moon {
+            margin-top: -20%;
+        }
+        .lblWelcome {
+            top: 40%;
+            font-size: 2rem;
+        }
     }
 }
 
 @media screen and (max-width: 360px) {
     .parallax {
+        img.moon {
+            margin-top: -25%;
+        }
         .lblWelcome {
-            font-size: 1.3rem;
-            margin-top: -10%;
-        }
-        .moon {
-            height: 60%;
-            margin-top: 10%;
-        }
-    }
-    .portfolio-container {
-        header {
-            flex-direction: column;
-            .tuanTitle {
-                // display: none;
-                // background-color: red;
-                // font-size: 1rem;
-            }
+            font-size: 1.5rem;
         }
     }
 }
-
-@media screen and (max-width: 480px) {}
-
-@media screen and (max-width: 768px) {}
-
-@media screen and (max-width: 992px) {}
-
-@media screen and (max-width: 1200px) {}

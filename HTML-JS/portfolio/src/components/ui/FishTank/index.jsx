@@ -30,16 +30,16 @@ const FishTank = ({ children }) => {
   }, []);
 
   return (
-    <StyledFishTank className='bubble-field text-white bg-black mb-[100%] w-full h-full text-center relative overflow-hidden'>
+    <StyledFishTank className='bubble-field text-white bg-black text-center relative overflow-hidden'>
       <Fish className="fish yellow-green-fish blue-fish absolute left-0 bottom-[80%]" />
-      <Fish className="fish absolute left-0 bottom-[50%]" />
-      <Fish className="fish blue-fish absolute left-0 bottom-[5px]" />
+      <Fish className="fish absolute left-0 bottom-[40%]" />
+      <Fish className="fish blue-fish absolute left-0 bottom-[4%]" />
       {children}
     </StyledFishTank>
   )
 }
 
-const StyledFishTank = styled.div`
+const StyledFishTank = styled.main`
   // bubbles
   @keyframes bubble {
       0% { 
@@ -110,11 +110,11 @@ const StyledFishTank = styled.div`
         -o-transform: translateY(0px); 
       }
       100% { 
-        transform: translateY(-2000px);
-        -webkit-transform: translateY(-2000px);
-        -moz-transform: translateY(-2000px);
-        -ms-transform: translateY(-2000px);
-        -o-transform: translateY(-2000px); 
+        transform: translateY(-200rem);
+        -webkit-transform: translateY(-200rem);
+        -moz-transform: translateY(-200rem);
+        -ms-transform: translateY(-200rem);
+        -o-transform: translateY(-200rem); 
       }
   }
 
@@ -251,7 +251,8 @@ const StyledFishTank = styled.div`
   }
 
   .yellow-green-fish .fish-body {
-    background-color: yellowgreen;
+    /* background-color: yellowgreen; */
+    background: linear-gradient(to left, #013737, #0098e0, #0098e0);
   }
 
   .fish-body:before {
