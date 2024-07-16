@@ -42,7 +42,9 @@ export default defineConfig({
       "@layouts": resolve(__dirname, "./src/layouts"),
       "@pages": resolve(__dirname, "./src/pages"),
       "@routes": resolve(__dirname, "./src/routes"),
+      "@utils": resolve(__dirname, "./src/utils"),
       "@data": resolve(__dirname, "./src/data"),
+      "@hooks": resolve(__dirname, "./src/hooks"),
     },
   },
   // server: {

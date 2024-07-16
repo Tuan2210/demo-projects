@@ -9,6 +9,8 @@ const IMAGES = {
   avatar: s3Url + "DinhQuangTuan.png",
   dev: s3Url + "dev.png",
   vnFlag: s3Url + "vn-flag.gif ",
+  seabed: s3Url + "seabed-resize.png",
+  algae: s3Url + "algae.gif",
 };
 
 export default IMAGES;

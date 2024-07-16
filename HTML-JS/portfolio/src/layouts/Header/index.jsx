@@ -28,9 +28,9 @@ export default function Header() {
   };
 
   return (
-    <header className="flex justify-around gap-[40%] p-2 flex-grow">
-      <img src={IMAGES.vnFlag} alt="VN" width={150} />
-      <div className={cx(["menuHeader", "flex gap-16"])}>
+    <header className={cx(["header", "grid grid-cols-2 items-center"])}>
+      <img src={IMAGES.vnFlag} alt="VN" width={150} className={cx(["vnFlag", "col-span-1"])} />
+      <div className={cx(["menuHeader", "col-span-1 text-right flex justify-around"])}>
         {menuList.map((item, index) => (
           <button
             key={index}

@@ -4,4 +4,6 @@ declare module "@constants/*";
 declare module "@layouts/*";
 declare module "@pages/*";
 declare module "@routes/*";
+declare module "@utils/*";
 declare module "@data/*";
+declare module "@hooks/*";
