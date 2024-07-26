@@ -57,13 +57,17 @@ export default function Footer() {
 
   return (
     <footer className="flex flex-col items-center text-white bg-black">
-      <div className="flex gap-3 text-[cyan] hover:cursor-default">
+      {/* <div className="flex gap-3 text-[cyan] hover:cursor-default">
         <div className="flex items-center gap-1">
           <CopyrightIcon />
           <p className="text-base">Dinh Quang Tuan</p>
         </div>
         <p className="text-base">|</p>
         <p className="text-base">Visits: {visits}</p>
+      </div> */}
+      <div className="flex items-center gap-1 text-[cyan] hover:cursor-default">
+        <CopyrightIcon />
+        <p className="text-base">Dinh Quang Tuan</p>
       </div>
       <Algaes />
       {/* <img src={IMAGES.seabed} className="w-full mt-[-30%]" alt="seabed-img" /> */}
