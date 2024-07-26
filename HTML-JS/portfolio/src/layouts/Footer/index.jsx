@@ -1,5 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import IMAGES from "@constants/imgUrl";
+import useVisitCount from "@hooks/useVisitCount";
+
 import CopyrightIcon from '@mui/icons-material/Copyright';
 
 import { FooterStyle } from "@components/styles";
@@ -7,6 +9,7 @@ import classNames from "classnames/bind";
 const cx = classNames.bind(FooterStyle);
 
 export default function Footer() {
+  // handle responsive algaes
   const [algaeCount, setAlgaeCount] = useState(9);
 
   const handleResize = () => {
@@ -49,11 +52,18 @@ export default function Footer() {
     );
   };
 
+  // visits count
+  const visits = useVisitCount()
+
   return (
     <footer className="flex flex-col items-center text-white bg-black">
-      <div className="flex items-center gap-1 text-[cyan] hover:cursor-default">
-        <CopyrightIcon />
-        <p className="text-base">Dinh Quang Tuan</p>
+      <div className="flex gap-3 text-[cyan] hover:cursor-default">
+        <div className="flex items-center gap-1">
+          <CopyrightIcon />
+          <p className="text-base">Dinh Quang Tuan</p>
+        </div>
+        <p className="text-base">|</p>
+        <p className="text-base">Visits: {visits}</p>
       </div>
       <Algaes />
       {/* <img src={IMAGES.seabed} className="w-full mt-[-30%]" alt="seabed-img" /> */}
