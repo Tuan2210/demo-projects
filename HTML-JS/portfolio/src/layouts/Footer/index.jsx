@@ -52,8 +52,8 @@ export default function Footer() {
     );
   };
 
-  // visits count
-  const visits = useVisitCount()
+  // console.log('visit', visits);
+
 
   return (
     <footer className="flex flex-col items-center text-white bg-black">

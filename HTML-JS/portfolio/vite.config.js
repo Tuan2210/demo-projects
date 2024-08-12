@@ -47,7 +47,10 @@ export default defineConfig({
       "@hooks": resolve(__dirname, "./src/hooks"),
     },
   },
-  // server: {
-  //   port: 5174,
-  // },
+  server: {
+    // port: 5174,
+    proxy: {
+      "/api": "http://localhost:3000",
+    },
+  },
 });

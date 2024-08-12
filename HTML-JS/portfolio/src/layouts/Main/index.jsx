@@ -55,7 +55,7 @@ export default function Content() {
   const onDownload = () => {
     const link = document.createElement("a");
     link.href = CV;
-    link.download = 'CV_DinhQuangTuan_Fresher.pdf';
+    link.download = 'CV_DinhQuangTuan.pdf';
     link.click();
   }
 
@@ -159,7 +159,7 @@ export default function Content() {
                 </p>
               </div>
               <p className="text-justify">
-                My major is Software Engineering. I'm look forward to finding a fresher full-time job.<br />
+                My major is Software Engineering. I'm look forward to finding a fresher/intern full-time job.<br />
                 As a graduated student from Industrial University of HCMC, without much experience,
                 all I have are passion, responsibility and sincerity.
               </p>

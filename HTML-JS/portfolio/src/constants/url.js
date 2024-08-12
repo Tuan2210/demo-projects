@@ -1,1 +1,1 @@
-export const CV = "/CV_DinhQuangTuan_Fresher.pdf"
+export const CV = "/CV_DinhQuangTuan.pdf"

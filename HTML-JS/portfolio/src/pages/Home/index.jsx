@@ -3,6 +3,7 @@ import React from "react";
 import { Header, Main, Footer } from "@layouts"
 
 import useScroll from "@hooks/useScroll";
+import useVisitCount from "@hooks/useVisitCount";
 
 import IMAGES from "@constants/imgUrl";
 
@@ -25,6 +26,9 @@ export default function Home() {
     bird2Ref,
     bird3Ref,
   } = useScroll();
+
+  // visits count
+  // const visits = useVisitCount()
 
   return (
     <div>
