@@ -8,7 +8,7 @@ import { FooterStyle } from "@components/styles";
 import classNames from "classnames/bind";
 const cx = classNames.bind(FooterStyle);
 
-export default function Footer() {
+export default function Footer({ visits }) {
   // handle responsive algaes
   const [algaeCount, setAlgaeCount] = useState(9);
 
@@ -52,23 +52,20 @@ export default function Footer() {
     );
   };
 
-  // console.log('visit', visits);
-
-
   return (
     <footer className="flex flex-col items-center text-white bg-black">
-      {/* <div className="flex gap-3 text-[cyan] hover:cursor-default">
+      <div className="flex gap-3 text-[cyan] hover:cursor-default">
         <div className="flex items-center gap-1">
           <CopyrightIcon />
           <p className="text-base">Dinh Quang Tuan</p>
         </div>
         <p className="text-base">|</p>
         <p className="text-base">Visits: {visits}</p>
-      </div> */}
-      <div className="flex items-center gap-1 text-[cyan] hover:cursor-default">
+      </div>
+      {/* <div className="flex items-center gap-1 text-[cyan] hover:cursor-default">
         <CopyrightIcon />
         <p className="text-base">Dinh Quang Tuan</p>
-      </div>
+      </div> */}
       <Algaes />
       {/* <img src={IMAGES.seabed} className="w-full mt-[-30%]" alt="seabed-img" /> */}
     </footer>
