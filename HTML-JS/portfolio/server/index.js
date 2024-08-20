@@ -21,9 +21,7 @@ app.use(express.json({ limit: "20mb" }));
 app.use(
   cors({
     credentials: true,
-    origin:
-      "http://localhost:5173" ||
-      "https://portfolio-dinh-quang-tuan-server.onrender.com/api",
+    origin: "https://portfolio-dinh-quang-tuan-server.onrender.com/api", // "http://localhost:5173"
   })
 );
 
