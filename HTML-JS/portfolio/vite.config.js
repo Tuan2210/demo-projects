@@ -52,9 +52,7 @@ export default defineConfig({
     // port: 5174,
     proxy: {
       "/api": {
-        target:
-          // "http://localhost:3000/api" ||
-          "https://portfolio-dinh-quang-tuan-server.onrender.com/api",
+        target: "http://localhost:3000/api",
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ""),
       },

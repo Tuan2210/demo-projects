@@ -18,14 +18,14 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(express.json({ limit: "20mb" }));
-// app.use(
-//   cors({
-//     credentials: true,
-//     origin:
-//       "http://localhost:5173" ||
-//       "https://portfolio-dinh-quang-tuan-server.onrender.com",
-//   })
-// );
+app.use(
+  cors({
+    credentials: true,
+    origin:
+      "http://localhost:5173" ||
+      "https://portfolio-dinh-quang-tuan-server.onrender.com",
+  })
+);
 
 // if (!mongoDbUrl) {
 //   console.error("Error: VITE_MONGODB_URL is not defined in .env file.");
