@@ -4,7 +4,7 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import path from "path";
-// import cors from "cors";
+import cors from "cors";
 import { fileURLToPath } from "url";
 
 import pageVisitRoute from "./routes/pageVisit.js";
