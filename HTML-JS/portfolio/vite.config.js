@@ -53,7 +53,7 @@ export default defineConfig({
     proxy: {
       "/api": {
         target:
-          "http://localhost:3000/api" ||
+          // "http://localhost:3000/api" ||
           "https://portfolio-dinh-quang-tuan-server.onrender.com/api",
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ""),
