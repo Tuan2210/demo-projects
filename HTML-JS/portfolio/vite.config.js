@@ -45,12 +45,19 @@ export default defineConfig({
       "@utils": resolve(__dirname, "./src/utils"),
       "@data": resolve(__dirname, "./src/data"),
       "@hooks": resolve(__dirname, "./src/hooks"),
+      "@services": resolve(__dirname, "./src/services"),
     },
   },
   server: {
     // port: 5174,
     proxy: {
-      "/api": "http://localhost:3000",
+      "/api": {
+        target:
+          "http://localhost:3000/api" ||
+          "https://portfolio-dinh-quang-tuan-server.onrender.com/api",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ""),
+      },
     },
   },
 });

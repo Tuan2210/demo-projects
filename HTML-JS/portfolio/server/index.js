@@ -4,7 +4,10 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import path from "path";
+// import cors from "cors";
 import { fileURLToPath } from "url";
+
+import pageVisitRoute from "./routes/pageVisit.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -15,11 +18,21 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(express.json({ limit: "20mb" }));
+// app.use(
+//   cors({
+//     credentials: true,
+//     origin:
+//       "http://localhost:5173" ||
+//       "https://portfolio-dinh-quang-tuan-server.onrender.com",
+//   })
+// );
 
 // if (!mongoDbUrl) {
 //   console.error("Error: VITE_MONGODB_URL is not defined in .env file.");
 //   process.exit(1); // Exit the application
 // }
+
+app.use("/api/pageVisit", pageVisitRoute);
 
 // Connect to MongoDB
 mongoose

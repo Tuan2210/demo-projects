@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import { Header, Main, Footer } from "@layouts"
 
@@ -28,7 +28,7 @@ export default function Home() {
   } = useScroll();
 
   // visits count
-  // const visits = useVisitCount()
+  const visits = useVisitCount()
 
   return (
     <div>
@@ -52,7 +52,7 @@ export default function Home() {
       <div className={cx(["portfolio-container", "relative overflow-hidden max-w-full"])}>
         <Header />
         <Main />
-        <Footer />
+        <Footer visits={visits} />
       </div>
     </div>
   )

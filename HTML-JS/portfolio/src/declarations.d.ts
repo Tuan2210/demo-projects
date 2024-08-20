@@ -7,3 +7,4 @@ declare module "@routes/*";
 declare module "@utils/*";
 declare module "@data/*";
 declare module "@hooks/*";
+declare module "@services/*";

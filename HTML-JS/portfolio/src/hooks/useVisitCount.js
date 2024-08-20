@@ -1,27 +1,21 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
+import { getPageVisit } from "@services/apiRequests";
+import { addPageVisit } from "@services/apiRequests";
 
 export default function useVisitCount() {
   const [count, setCount] = useState(0);
-  const hasIncremented = useRef(false);
 
   useEffect(() => {
-    if (!hasIncremented.current) {
-      const storedCount = parseInt(sessionStorage.getItem("pageVisits")) || 0;
+    const fetchVisit = async () => {
+      const visit = await getPageVisit();
 
-      const initialCount = Number(storedCount) || 0;
-      setCount(initialCount + 1);
-      sessionStorage.setItem("pageVisits", initialCount + 1);
+      if (!visit || visit === 0) return;
+      else await addPageVisit({ pageVisit: visit + 1 });
 
-      fetch("/api/visit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ visitCount: initialCount + 1 }),
-      });
+      setCount(await getPageVisit());
+    };
 
-      hasIncremented.current = true;
-    }
+    fetchVisit();
   }, []);
 
   return count;
