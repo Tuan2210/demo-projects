@@ -50,12 +50,12 @@ export default defineConfig({
   },
   server: {
     // port: 5174,
-    proxy: {
-      "/api": {
-        target: "http://localhost:3000/api",
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ""),
-      },
-    },
+    // proxy: {
+    //   "/api": {
+    //     target: "http://localhost:3000/api",
+    //     changeOrigin: true,
+    //     rewrite: (path) => path.replace(/^\/api/, ""),
+    //   },
+    // },
   },
 });
