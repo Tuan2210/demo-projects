@@ -1,2 +1,4 @@
-export const CV = "/CV_DinhQuangTuan.pdf"
-// export const API_URL = "http://localhost:3000"
+export const CV = "/CV_DinhQuangTuan.pdf";
+export const API_URL =
+  "https://portfolio-dinh-quang-tuan-server.onrender.com" ||
+  "http://localhost:3000";

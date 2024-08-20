@@ -23,7 +23,7 @@ app.use(
     credentials: true,
     origin:
       "http://localhost:5173" ||
-      "https://portfolio-dinh-quang-tuan-server.onrender.com//api",
+      "https://portfolio-dinh-quang-tuan-server.onrender.com/api",
   })
 );
 
