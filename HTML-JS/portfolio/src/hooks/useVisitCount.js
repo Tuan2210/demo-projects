@@ -6,16 +6,22 @@ export default function useVisitCount() {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    const fetchVisit = async () => {
-      const visit = await getPageVisit();
+    const fetchAndUpdateVisit = async () => {
+      try {
+        const visit = await getPageVisit();
 
-      if (!visit || visit === 0) return;
-      else await addPageVisit({ pageVisit: visit + 1 });
+        if (!visit || visit === 0) return;
 
-      setCount(await getPageVisit());
+        const updatedVisit = visit + 1;
+        await addPageVisit({ pageVisit: updatedVisit });
+
+        setCount(updatedVisit);
+      } catch (error) {
+        console.error("Failed to fetch or update page-visit", error);
+      }
     };
 
-    fetchVisit();
+    fetchAndUpdateVisit();
   }, []);
 
   return count;

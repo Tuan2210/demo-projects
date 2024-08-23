@@ -4,7 +4,7 @@ import { API_URL } from "@constants/url";
 
 export const getPageVisit = async () => {
   try {
-    return (await axios.get(`${API_URL}/api/pageVisit/getPageVisit`)).data;
+    return (await axios.get(`${API_URL}/api/pageVisit/getPageVisit`, { timeout: 1000 })).data;
     // return (await api.get("/pageVisit/getPageVisit")).data;
   } catch (error) {
     console.error("Error fetching page-visit", error);
@@ -13,7 +13,7 @@ export const getPageVisit = async () => {
 
 export const addPageVisit = async (pageVisitObj) => {
   try {
-    await axios.post(`${API_URL}/api/pageVisit/addPageVisit`, pageVisitObj);
+    await axios.post(`${API_URL}/api/pageVisit/addPageVisit`, pageVisitObj, { timeout: 1000 });
     // await api.post("/pageVisit/addPageVisit", pageVisitObj);
   } catch (error) {
     console.error("Error adding page-visit", error);
