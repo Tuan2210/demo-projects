@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 
-export default function useScroll() {
+// page-scroll
+const usePageScroll = () => {
   const stars1Ref = useRef(null);
   const stars2Ref = useRef(null);
   const moonRef = useRef(null);
@@ -48,4 +49,25 @@ export default function useScroll() {
   }, []);
 
   return { stars1Ref, stars2Ref, moonRef, bird1Ref, bird2Ref, bird3Ref };
-}
+};
+
+// click menu auto scroll
+const useScrollClick = (item) => {
+  switch (item) {
+    case "Home":
+      window.scrollTo(0, 0);
+      break;
+    default:
+      break;
+  }
+  const sectionScroll = document.getElementById(item.toLowerCase());
+  if (sectionScroll) {
+    const rect = sectionScroll.getBoundingClientRect();
+    window.scrollTo({
+      top: rect.top + window.scrollY,
+      behavior: "smooth",
+    });
+  }
+};
+
+export { usePageScroll, useScrollClick };

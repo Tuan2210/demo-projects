@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import { Header, Main, Footer } from "@layouts"
 
-import useScroll from "@hooks/useScroll";
+import { usePageScroll } from "@hooks/useScroll";
 import useVisitCount from "@hooks/useVisitCount";
 
 import IMAGES from "@constants/imgUrl";
@@ -25,7 +25,7 @@ export default function Home() {
     bird1Ref,
     bird2Ref,
     bird3Ref,
-  } = useScroll();
+  } = usePageScroll();
 
   // visits count
   const visits = useVisitCount()

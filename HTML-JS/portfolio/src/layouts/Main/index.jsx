@@ -143,7 +143,7 @@ export default function Content() {
       </section>
 
       {/* 2nd section_about */}
-      <section className={cx(["sndSection", "grid grid-cols-[30%_auto]"])}>
+      <section id="about" className={cx(["sndSection", "grid grid-cols-[30%_auto]"])}>
         {/* left 2nd */}
         <div className={cx(["sndLeft", "w-full flex items-center justify-center"])}>
           <img src={IMAGES.dev} alt="dev" />
@@ -188,7 +188,7 @@ export default function Content() {
       </section>
 
       {/* 3rd section_projects */}
-      <section className={cx(["trdSection", "pl-6 pr-6 flex flex-col gap-6"])}>
+      <section id="projects" className={cx(["trdSection", "pl-6 pr-6 flex flex-col gap-6"])}>
         <div className={cx(["sectionTitle", "text-[cyan] text-[2.5rem]"])}>Projects</div>
         <div className="grid grid-cols-4 gap-6 place-items-center">
           {prjsData.map((item, index) => (
@@ -198,7 +198,7 @@ export default function Content() {
       </section>
 
       {/* 4th section_contact */}
-      <section className={cx(["fourthSection", "mt-[5%] pl-6 pr-6 flex flex-col gap-6"])}>
+      <section id="contact" className={cx(["fourthSection", "mt-[5%] pl-6 pr-6 flex flex-col gap-6"])}>
         <div className={cx(["sectionTitle", "text-[cyan] text-[2.5rem]"])}>Contact</div>
         <div className="grid grid-cols-[30%_auto]">
           {/* left 4th - gmail, phone-number, github, linkedin, cv */}
@@ -286,7 +286,7 @@ export default function Content() {
       </section>
 
       {/* 5th section_draw-design */}
-      <section className={cx(["fifthSection", "mt-[5%] pl-6 pr-6 flex flex-col gap-6"])}>
+      <section id="draw" className={cx(["fifthSection", "mt-[5%] pl-6 pr-6 flex flex-col gap-6"])}>
         <div className={cx(["sectionTitle", "text-[cyan] text-[2.5rem]"])}>Draw - Design</div>
         <div className="grid grid-cols-4 place-items-center">
           {drawData.map((item, index) => (
