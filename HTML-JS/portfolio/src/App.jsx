@@ -2,6 +2,8 @@ import React from "react";
 import { RouterProvider } from "react-router-dom";
 import { publicRoutes } from "@routes";
 
+import { ChatBotButton } from "@components/ui";
+
 import { Toaster } from "react-hot-toast";
 
 import ScrollToTop from "react-scroll-to-top";
@@ -20,7 +22,7 @@ function App() {
         style={{ backgroundColor: 'none', borderRadius: '50%' }}
         color="cyan"
       />
-
+      <ChatBotButton />
     </div>
   )
 }

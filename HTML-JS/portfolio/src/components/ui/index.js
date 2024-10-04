@@ -3,5 +3,8 @@ import Collapse from "./Collapse";
 import Card from "./Card";
 import Button from "./Button";
 import TextField from "./TextField";
+import ChatBot from "./ChatBotWidget/ChatBot";
+import ChatBotButton from "./ChatBotWidget/ChatBotButton";
+import { Dot } from "./DotAnimation";
 
-export { FishTank, Collapse, Card, Button, TextField };
+export { FishTank, Collapse, Card, Button, TextField, ChatBot, ChatBotButton, Dot };

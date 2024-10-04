@@ -11,6 +11,7 @@ const IMAGES = {
   vnFlag: s3Url + "vn-flag.gif ",
   seabed: s3Url + "seabed-resize.png",
   algae: s3Url + "algae.gif",
+  eve: s3Url + "eve-chat-bot.png"
 };
 
 export default IMAGES;

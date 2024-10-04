@@ -8,6 +8,7 @@ import cors from "cors";
 import { fileURLToPath } from "url";
 
 import pageVisitRoute from "./routes/pageVisit.js";
+// import chatBotRoute from "./routes/chatBot.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -34,6 +35,7 @@ app.use(
 // }
 
 app.use("/api/pageVisit", pageVisitRoute);
+// app.use("/api/chatBot", chatBotRoute);
 
 // Connect to MongoDB
 mongoose
