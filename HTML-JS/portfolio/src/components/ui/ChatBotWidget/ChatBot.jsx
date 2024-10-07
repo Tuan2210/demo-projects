@@ -63,6 +63,13 @@ export default function ChatBot() {
 
       setIsReplying(false)
       setMessages([...messages, userMessage, aiMessage]);
+
+      // scroll to bottom  msg-list
+      // const msgList = document.querySelector('.msgList');
+      // msgList.scrollTo({
+      //   top: msgList.scrollHeight,
+      //   behavior: 'smooth'
+      // });
     } catch (error) {
       console.log(error);
       setIsReplying(false)
@@ -70,11 +77,11 @@ export default function ChatBot() {
   }
 
   return (
-    <div className="bg-white rounded-xl float-right w-[26rem]">
+    <div className={cx(["chatBotFrame", "ml-auto w-[88%] bg-white rounded-xl"])}>
       <div className={cx(["eveBotTitle", "flex items-center justify-center p-3 rounded-ss-xl rounded-se-xl bg-black text-xl text-cyan-300 font-semibold border border-solid border-cyan-300 border-b-0"])}>EveBot</div>
       <MessageList
-        className='message-list h-[20rem] pl-1 pr-1 rounded-xl overflow-y-auto'
-        lockable={true}
+        className={cx(['msgList', 'message-list pl-1 pr-1 h-72 rounded-xl overflow-y-auto'])}
+        lockable={false}
         toBottomHeight={'100%'}
         dataSource={messages}
       />

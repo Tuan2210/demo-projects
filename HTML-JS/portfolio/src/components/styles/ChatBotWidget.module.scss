@@ -2,3 +2,91 @@
 .eveBotTitle {
   font-family: "Gugi", sans-serif;
 }
+
+@media screen and (max-width: 1200px) {
+  .chatBotContainer {
+    .chatBotWrapper {
+      width: 50%;
+    }
+  }
+  .chatBotFrame {
+    width: 90%;
+    .msgList {
+      height: 15.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .chatBotContainer {
+    .chatBotWrapper {
+      width: 55%;
+    }
+  }
+  .chatBotFrame {
+    width: 85%;
+    .eveBotTitle {
+      padding: 0.75rem;
+    }
+    .msgList {
+      height: 15rem;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .chatBotContainer {
+    .chatBotWrapper {
+      width: 65%;
+    }
+  }
+  .chatBotFrame {
+    width: 85%;
+    .eveBotTitle {
+      padding: 0.75rem;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .chatBotContainer {
+    .chatBotWrapper {
+      width: 100% !important;
+      justify-content: center;
+    }
+  }
+  .chatBotFrame {
+    margin-left: 0 !important;
+    width: 80% !important;
+    .eveBotTitle {
+      padding: 0.4rem;
+      font-size: 1.3rem;
+    }
+    .msgList {
+      height: 13rem;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .chatBotFrame {
+    width: 86% !important;
+    .eveBotTitle {
+      padding: 0.5rem;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .chatBotFrame {
+    width: 90% !important;
+    .eveBotTitle {
+      padding: 0.25rem;
+      font-size: 1rem;
+    }
+    .msgList {
+      height: 13.5rem;
+    }
+  }
+}
