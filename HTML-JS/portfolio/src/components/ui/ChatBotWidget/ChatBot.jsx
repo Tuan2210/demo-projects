@@ -38,7 +38,7 @@ export default function ChatBot() {
 
     const userMessage = {
       position: "right",
-      title: 'You',
+      // title: 'You',
       type: "text",
       text: question,
     };
