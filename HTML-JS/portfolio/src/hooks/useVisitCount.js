@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { getPageVisit } from "@services/apiRequests";
 import { addPageVisit } from "@services/apiRequests";
 

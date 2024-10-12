@@ -3,18 +3,14 @@ import React, { useEffect, useState } from "react";
 import "react-chat-elements/dist/main.css"
 import { Button, Input, MessageList } from "react-chat-elements";
 
-// @chatscope/chat-ui-kit-react - reading doc...
-
-import axios from "axios";
-
-import { API_GEMINI_URL } from "@constants/url";
-import { GEMINI_KEY } from "@constants/envUrl";
+// @chatscope/chat-ui-kit-react - reading another doc...
 
 import SendIcon from '@mui/icons-material/Send';
 
 import { Dot } from "@components/ui";
-
 import { ChatBotWidgetStyle } from "@components/styles";
+
+import useChatBot from "@hooks/useChatBot";
 
 import classNames from "classnames/bind";
 const cx = classNames.bind(ChatBotWidgetStyle);
@@ -45,35 +41,8 @@ export default function ChatBot() {
     setMessages([...messages, userMessage]);
     setInputValue('');
 
-    try {
-      const response = await axios({
-        url: `${API_GEMINI_URL}?key=${GEMINI_KEY}`,
-        method: "post",
-        data: {
-          contents: [{ parts: [{ text: question }] }],
-        },
-        // timeout: 2000
-      });
-
-      const aiMessage = {
-        position: "left",
-        type: "text",
-        text: response["data"]["candidates"][0]["content"]["parts"][0]["text"],
-      };
-
-      setIsReplying(false)
-      setMessages([...messages, userMessage, aiMessage]);
-
-      // scroll to bottom  msg-list
-      // const msgList = document.querySelector('.msgList');
-      // msgList.scrollTo({
-      //   top: msgList.scrollHeight,
-      //   behavior: 'smooth'
-      // });
-    } catch (error) {
-      console.log(error);
-      setIsReplying(false)
-    }
+    const aiMessage = await useChatBot(question, setIsReplying)
+    setMessages([...messages, userMessage, aiMessage]);
   }
 
   return (
