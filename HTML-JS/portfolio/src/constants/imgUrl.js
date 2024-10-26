@@ -11,7 +11,15 @@ const IMAGES = {
   vnFlag: s3Url + "vn-flag.gif ",
   seabed: s3Url + "seabed-resize.png",
   algae: s3Url + "algae.gif",
-  eve: s3Url + "eve-chat-bot.png"
+  eve: s3Url + "eve-chat-bot.png",
+
+  // halloween
+  // bats: s3Url + "halloween/bats.gif",
+  // hlwLights: s3Url + "halloween/hlw-string-lights.gif",
+  ////
+
+  // christmas noel
+  santa: s3Url + "christmas-noel/santa-reindeer.gif",
 };
 
 export default IMAGES;

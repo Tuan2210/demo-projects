@@ -2,13 +2,17 @@ import React from "react";
 import { RouterProvider } from "react-router-dom";
 import { publicRoutes } from "@routes";
 
-import { ChatBotButton } from "@components/ui";
-
 import { Toaster } from "react-hot-toast";
 
 import ScrollToTop from "react-scroll-to-top";
 
+import { ChatBotButton } from "@components/ui";
+import { HomeStyle } from "@components/styles";
 import ArrowUp from '@data/ArrowUp'
+import IMAGES from "@constants/imgUrl";
+
+import classNames from "classnames/bind";
+const cx = classNames.bind(HomeStyle);
 
 function App() {
   return (
@@ -23,6 +27,12 @@ function App() {
         color="cyan"
       />
       <ChatBotButton />
+
+      {/* halloween */}
+      {/* <div className="fixed top-0 flex justify-between mt-[-1%] w-full">
+        <img src={IMAGES.hlwLights} alt="hlwLights1" className={cx(["hlwLights1", ""])} />
+        <img src={IMAGES.hlwLights} alt="hlwLights2" className={cx(["hlwLights2", ""])} />
+      </div> */}
     </div>
   )
 }

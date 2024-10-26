@@ -1,6 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
 import IMAGES from "@constants/imgUrl";
-import useVisitCount from "@hooks/useVisitCount";
 
 import CopyrightIcon from '@mui/icons-material/Copyright';
 

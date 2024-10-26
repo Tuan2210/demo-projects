@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 
 import { Header, Main, Footer } from "@layouts"
 
+import { LightRope } from "@components/ui";
+
 import { usePageScroll } from "@hooks/useScroll";
 import useVisitCount from "@hooks/useVisitCount";
 
@@ -25,6 +27,7 @@ export default function Home() {
     bird1Ref,
     bird2Ref,
     bird3Ref,
+    santaRef,
   } = usePageScroll();
 
   // visits count
@@ -40,17 +43,30 @@ export default function Home() {
         <img src={IMAGES.flying_bird1} alt="bird1" ref={bird1Ref} className={cx(["bird1", ""])} />
         <img src={IMAGES.flying_bird2} alt="bird2" ref={bird2Ref} className={cx(["bird2", ""])} />
         <img src={IMAGES.flying_bird2} alt="bird3" ref={bird3Ref} className={cx(["bird3", ""])} />
+        <img src={IMAGES.santa} alt="santaRef" ref={santaRef} className={cx(["santa", ""])} />
         <img src={IMAGES.night_sea} alt="night-sea" className={cx(["sea", ""])} />
-        <TypeAnimation
+        {/* <TypeAnimation
           className={cx(["lblWelcome", "absolute z-[1] top-[50%] left-[50%] text-6xl"])}
           sequence={['Welcome!', 0]}
           speed={20}
           repeat={0}
           cursor={false}
+        /> */}
+
+        {/* decorate all holidays: halloween, christmas-noel, new year-lunar new year,... */}
+        {/* <img src={IMAGES.bats} alt="bats" ref={bird1Ref} className={cx(["bird1", ""])} /> */}
+        <TypeAnimation
+          className={cx(["lblHolidays", "absolute z-[1] top-[50%] left-[50%] text-5xl text-center"])}
+          sequence={['MERRY CHRISTMAS', 0]}
+          speed={20}
+          repeat={0}
+          cursor={false}
         />
+        {/* ///////////////////////// */}
       </div>
       <div className={cx(["portfolio-container", "relative overflow-hidden max-w-full"])}>
         <Header />
+        <LightRope />
         <Main />
         <Footer visits={visits} />
       </div>
