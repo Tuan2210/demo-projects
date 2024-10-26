@@ -37,17 +37,29 @@ export default function Home() {
         <img src={IMAGES.stars} alt="stars1" ref={stars1Ref} className={cx(["stars1", "left-[-50%]"])} />
         <img src={IMAGES.stars} alt="stars2" ref={stars2Ref} className={cx(["stars2", "left-[50%]"])} />
         <img src={IMAGES.moon} alt="moon" ref={moonRef} className={cx(["moon", "mix-blend-screen object-contain"])} />
-        <img src={IMAGES.flying_bird1} alt="bird1" ref={bird1Ref} className={cx(["bird1", ""])} />
+        {/* <img src={IMAGES.flying_bird1} alt="bird1" ref={bird1Ref} className={cx(["bird1", ""])} /> */}
         <img src={IMAGES.flying_bird2} alt="bird2" ref={bird2Ref} className={cx(["bird2", ""])} />
         <img src={IMAGES.flying_bird2} alt="bird3" ref={bird3Ref} className={cx(["bird3", ""])} />
         <img src={IMAGES.night_sea} alt="night-sea" className={cx(["sea", ""])} />
-        <TypeAnimation
+        {/* <TypeAnimation
           className={cx(["lblWelcome", "absolute z-[1] top-[50%] left-[50%] text-6xl"])}
           sequence={['Welcome!', 0]}
           speed={20}
           repeat={0}
           cursor={false}
+        /> */}
+
+        {/* decorate halloween */}
+        <img src={IMAGES.bats} alt="bats" ref={bird1Ref} className={cx(["bird1", ""])} />
+        {/* label halloween */}
+        <TypeAnimation
+          className={cx(["lblHalloween", "absolute z-[1] top-[50%] left-[50%] text-5xl text-center"])}
+          sequence={['HAPPY HALLOWEEN!', 0]}
+          speed={20}
+          repeat={0}
+          cursor={false}
         />
+        {/* ///////////////////////// */}
       </div>
       <div className={cx(["portfolio-container", "relative overflow-hidden max-w-full"])}>
         <Header />

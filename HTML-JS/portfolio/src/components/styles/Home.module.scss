@@ -1,102 +1,131 @@
 @import "../GlobalStyles/GlobalStyles.scss";
 .parallax {
-    width: 100dvw;
-    max-width: 100%;
-    height: 100dvh;
-    .lblWelcome {
-        font-family: "Bungee Spice", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        transform: translate(-50%, -50%);
-    }
-    img {
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-    }
-    .sky,
-    .stars1,
-    .stars2 {
-        -o-object-fit: cover;
-        object-fit: cover;
-    }
-    .bird1,
-    .bird2,
-    .bird3 {
-        -o-object-fit: contain;
-        object-fit: contain;
-        width: 10%;
-    }
-    .bird1 {
-        height: 10%;
-        top: 45%;
-        left: 20%;
-    }
-    .bird2 {
-        height: 9.5%;
-        top: 45%;
-        left: 65%;
-    }
-    .bird3 {
-        height: 5%;
-        top: 50%;
-        left: 62%;
-    }
+  width: 100dvw;
+  max-width: 100%;
+  height: 100dvh;
+  .lblWelcome,
+  .lblHalloween {
+    font-family: "Bungee Spice", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    transform: translate(-50%, -50%);
+  }
+  img {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  .sky,
+  .stars1,
+  .stars2 {
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+  .bird1,
+  .bird2,
+  .bird3 {
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 10%;
+  }
+  .bird1 {
+    height: 10%;
+    top: 45%;
+    left: 20%;
+  }
+  .bird2 {
+    height: 9.5%;
+    top: 45%;
+    left: 65%;
+  }
+  .bird3 {
+    height: 5%;
+    top: 50%;
+    left: 62%;
+  }
 }
 
-.portfolio-container {}
-
 @media screen and (max-width: 1200px) {
-    .parallax {
-        .lblWelcome {
-            font-size: 3rem;
-        }
+  .parallax {
+    .lblWelcome {
+      font-size: 3rem;
     }
+    .lblHalloween {
+      font-size: 2.5rem;
+    }
+  }
 }
 
 @media screen and (max-width: 992px) {
-    .parallax {
-        .lblWelcome {
-            font-size: 2.75rem;
-        }
+  .parallax {
+    .lblWelcome {
+      font-size: 2.75rem;
     }
+    .lblHalloween {
+      font-size: 2rem;
+    }
+  }
+  .hlwLights1,
+  .hlwLights2 {
+    height: 25rem;
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .parallax {
-        img.moon {
-            margin-top: -10%;
-        }
-        .lblWelcome {
-            top: 40%;
-            font-size: 2.5rem;
-        }
+  .parallax {
+    img.moon {
+      margin-top: -10%;
     }
+    .lblWelcome {
+      top: 40%;
+      font-size: 2.5rem;
+    }
+    .lblHalloween {
+      font-size: 1.8rem;
+    }
+  }
+  .hlwLights1,
+  .hlwLights2 {
+    height: 18rem;
+  }
 }
 
 @media screen and (max-width: 480px) {
-    .parallax {
-        img.moon {
-            margin-top: -20%;
-        }
-        .lblWelcome {
-            top: 40%;
-            font-size: 2rem;
-        }
+  .parallax {
+    img.moon {
+      margin-top: -20%;
     }
+    .lblWelcome {
+      top: 40%;
+      font-size: 2rem;
+    }
+    .lblHalloween {
+      font-size: 1.5rem;
+    }
+  }
+  .hlwLights1 {
+    height: 20rem;
+  }
+  .hlwLights2 {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 360px) {
-    .parallax {
-        img.moon {
-            margin-top: -25%;
-        }
-        .lblWelcome {
-            font-size: 1.5rem;
-        }
+  .parallax {
+    img.moon {
+      margin-top: -25%;
     }
+    .lblWelcome {
+      font-size: 1.5rem;
+    }
+    .lblHalloween {
+      font-size: 1.2rem;
+    }
+  }
 }
