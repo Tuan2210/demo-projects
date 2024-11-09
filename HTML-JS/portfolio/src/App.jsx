@@ -29,10 +29,10 @@ function App() {
       <ChatBotButton />
 
       {/* halloween */}
-      <div className="fixed top-0 flex justify-between mt-[-1%] w-full">
+      {/* <div className="fixed top-0 flex justify-between mt-[-1%] w-full">
         <img src={IMAGES.hlwLights} alt="hlwLights1" className={cx(["hlwLights1", ""])} />
         <img src={IMAGES.hlwLights} alt="hlwLights2" className={cx(["hlwLights2", ""])} />
-      </div>
+      </div> */}
     </div>
   )
 }

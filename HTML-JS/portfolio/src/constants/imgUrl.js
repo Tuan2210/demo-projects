@@ -14,9 +14,12 @@ const IMAGES = {
   eve: s3Url + "eve-chat-bot.png",
 
   // halloween
-  bats: s3Url + "halloween/bats.gif",
-  hlwLights: s3Url + "halloween/hlw-string-lights.gif",
+  // bats: s3Url + "halloween/bats.gif",
+  // hlwLights: s3Url + "halloween/hlw-string-lights.gif",
   ////
+
+  // christmas noel
+  santa: s3Url + "christmas-noel/santa-reindeer.gif",
 };
 
 export default IMAGES;

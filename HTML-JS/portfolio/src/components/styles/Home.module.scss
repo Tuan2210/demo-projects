@@ -4,7 +4,7 @@
   max-width: 100%;
   height: 100dvh;
   .lblWelcome,
-  .lblHalloween {
+  .lblHolidays {
     font-family: "Bungee Spice", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -27,7 +27,8 @@
   }
   .bird1,
   .bird2,
-  .bird3 {
+  .bird3,
+  .santa {
     -o-object-fit: contain;
     object-fit: contain;
     width: 10%;
@@ -47,6 +48,12 @@
     top: 50%;
     left: 62%;
   }
+  .santa {
+    width: 40%;
+    height: 40%;
+    top: 55%;
+    left: -20%;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -54,7 +61,7 @@
     .lblWelcome {
       font-size: 3rem;
     }
-    .lblHalloween {
+    .lblHolidays {
       font-size: 2.5rem;
     }
   }
@@ -65,7 +72,7 @@
     .lblWelcome {
       font-size: 2.75rem;
     }
-    .lblHalloween {
+    .lblHolidays {
       font-size: 2rem;
     }
   }
@@ -85,7 +92,7 @@
       top: 40%;
       font-size: 2.5rem;
     }
-    .lblHalloween {
+    .lblHolidays {
       font-size: 1.8rem;
     }
   }
@@ -104,7 +111,7 @@
       top: 40%;
       font-size: 2rem;
     }
-    .lblHalloween {
+    .lblHolidays {
       font-size: 1.5rem;
     }
   }
@@ -124,7 +131,7 @@
     .lblWelcome {
       font-size: 1.5rem;
     }
-    .lblHalloween {
+    .lblHolidays {
       font-size: 1.2rem;
     }
   }

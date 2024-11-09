@@ -9,6 +9,9 @@ const usePageScroll = () => {
   const bird2Ref = useRef(null);
   const bird3Ref = useRef(null);
 
+  // christmas-noel
+  const santaRef = useRef(null);
+
   useEffect(() => {
     const handleScroll = () => {
       const pageHeight = document.documentElement.scrollHeight;
@@ -17,15 +20,14 @@ const usePageScroll = () => {
 
       if (valueY < scrollAble) {
         // Update styles using refs
-        if (stars1Ref.current) {
+        if (stars1Ref.current)
           stars1Ref.current.style.left = `${-(-50 + valueY * 0.1)}%`;
-        }
-        if (stars2Ref.current) {
+
+        if (stars2Ref.current)
           stars2Ref.current.style.left = `${-(50 + valueY * 0.1)}%`;
-        }
-        if (moonRef.current) {
-          moonRef.current.style.top = `${valueY + 2}px`;
-        }
+
+        if (moonRef.current) moonRef.current.style.top = `${valueY + 2}px`;
+
         if (bird1Ref.current) {
           bird1Ref.current.style.top = `${45 - valueY * 0.3}%`;
           bird1Ref.current.style.left = `${20 - valueY * 0.2}%`;
@@ -38,6 +40,11 @@ const usePageScroll = () => {
           bird3Ref.current.style.top = `${50 - valueY * 0.1}%`;
           bird3Ref.current.style.left = `${62 - valueY * -0.1}%`;
         }
+
+        if (santaRef.current) {
+          santaRef.current.style.top = `${55 - valueY * 0.2}%`;
+          santaRef.current.style.left = `${-20 - valueY * -0.3}%`;
+        }
       }
     };
 
@@ -48,7 +55,15 @@ const usePageScroll = () => {
     };
   }, []);
 
-  return { stars1Ref, stars2Ref, moonRef, bird1Ref, bird2Ref, bird3Ref };
+  return {
+    stars1Ref,
+    stars2Ref,
+    moonRef,
+    bird1Ref,
+    bird2Ref,
+    bird3Ref,
+    santaRef,
+  };
 };
 
 // click menu auto scroll
