@@ -61,7 +61,4 @@ export default defineConfig({
   },
   // navigate all routes to index.html
   base: "/",
-  build: {
-    outDir: "dist",
-  },
 });
