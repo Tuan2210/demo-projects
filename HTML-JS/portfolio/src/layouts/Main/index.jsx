@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 import IMAGES from "@constants/imgUrl";
 import { SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY } from "@constants/envUrl";
-import { CV } from "@constants/url";
 
 import { FishTank, Card, Button, TextField } from "@components/ui";
 import { MainStyle } from "@components/styles";
@@ -13,6 +12,8 @@ import drawData from '@data/draw.json'
 
 import tabData from '@utils/tabData'
 import schema from '@utils/schema'
+
+import useDownloadCV from "@hooks/useDownloadCV";
 
 import { TypeAnimation } from "react-type-animation";
 
@@ -50,14 +51,6 @@ export default function Content() {
   const handleTabChange = (event, newValue) => {
     setActiveTab(newValue);
   };
-
-  // handle download CV
-  const onDownload = () => {
-    const link = document.createElement("a");
-    link.href = CV;
-    link.download = 'CV_DinhQuangTuan.pdf';
-    link.click();
-  }
 
   const txtInputSx = {
     backgroundColor: '#262626',
@@ -221,7 +214,12 @@ export default function Content() {
                 </Link>
               </div>
             </div>
-            <Button type="button" onClick={onDownload}>Download CV</Button>
+            <div className="flex gap-4">
+              <Button type="button" onClick={useDownloadCV()}>Download CV</Button>
+              <Link to={'/preview-cv'}>
+                <Button type="button">Preview CV</Button>
+              </Link>
+            </div>
           </div>
           {/* right 4th_send email form */}
           <form

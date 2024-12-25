@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import IMAGES from "@constants/imgUrl";
 
+import { CircularProgress } from "@mui/material";
 import CopyrightIcon from '@mui/icons-material/Copyright';
 
 import { FooterStyle } from "@components/styles";
@@ -53,13 +54,16 @@ export default function Footer({ visits }) {
 
   return (
     <footer className="flex flex-col items-center text-white bg-black">
-      <div className="flex gap-3 text-[cyan] hover:cursor-default">
-        <div className="flex items-center gap-1">
+      <div className="flex items-center gap-3 text-[cyan] hover:cursor-default">
+        <div className="flex gap-1">
           <CopyrightIcon />
           <p className="text-base">Dinh Quang Tuan</p>
         </div>
         <p className="text-base">|</p>
-        <p className="text-base">Visits: {visits}</p>
+
+        <p className="text-base">Visits:{' '}
+          {visits ? visits : (<CircularProgress size={15} sx={{ color: '#fff' }} />)}
+        </p>
       </div>
       {/* <div className="flex items-center gap-1 text-[cyan] hover:cursor-default">
         <CopyrightIcon />

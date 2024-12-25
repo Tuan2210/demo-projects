@@ -1,0 +1,24 @@
+@import "../GlobalStyles/GlobalStyles.scss";
+.font-mochiy {
+    font-family: "Mochiy Pop One", sans-serif;
+}
+
+@media screen and (max-width: 1200px) {}
+
+@media screen and (max-width: 992px) {}
+
+@media screen and (max-width: 768px) {}
+
+@media screen and (max-width: 480px) {
+    .preview-cv-container>div {
+        padding: 0;
+        width: 85%;
+        overflow-x: scroll;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .preview-cv-container>div {
+        width: 90%;
+    }
+}

@@ -2,7 +2,16 @@ import HomeStyle from "./Home.module.scss";
 import HeaderStyle from "./Header.module.scss";
 import MainStyle from "./Main.module.scss";
 import FooterStyle from "./Footer.module.scss";
-import ChatBotWidgetStyle from './ChatBotWidget.module.scss'
-import HolidaysStyle from './Holidays.module.scss'
+import ChatBotWidgetStyle from "./ChatBotWidget.module.scss";
+import HolidaysStyle from "./Holidays.module.scss";
+import PreviewCVStyle from "./PreviewCV.module.scss";
 
-export { HomeStyle, HeaderStyle, MainStyle, FooterStyle, ChatBotWidgetStyle, HolidaysStyle };
+export {
+  HomeStyle,
+  HeaderStyle,
+  MainStyle,
+  FooterStyle,
+  ChatBotWidgetStyle,
+  HolidaysStyle,
+  PreviewCVStyle,
+};
