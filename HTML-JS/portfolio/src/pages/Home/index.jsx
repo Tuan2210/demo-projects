@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import { Header, Main, Footer } from "@layouts"
 
-import { LightRope } from "@components/ui";
+import { LightRope, Fireworks } from "@components/ui";
 
 import { usePageScroll } from "@hooks/useScroll";
 import useVisitCount from "@hooks/useVisitCount";
@@ -40,10 +40,11 @@ export default function Home() {
         <img src={IMAGES.stars} alt="stars1" ref={stars1Ref} className={cx(["stars1", "left-[-50%]"])} />
         <img src={IMAGES.stars} alt="stars2" ref={stars2Ref} className={cx(["stars2", "left-[50%]"])} />
         <img src={IMAGES.moon} alt="moon" ref={moonRef} className={cx(["moon", "mix-blend-screen object-contain"])} />
+        <Fireworks />
         <img src={IMAGES.flying_bird1} alt="bird1" ref={bird1Ref} className={cx(["bird1", ""])} />
         <img src={IMAGES.flying_bird2} alt="bird2" ref={bird2Ref} className={cx(["bird2", ""])} />
         <img src={IMAGES.flying_bird2} alt="bird3" ref={bird3Ref} className={cx(["bird3", ""])} />
-        <img src={IMAGES.santa} alt="santaRef" ref={santaRef} className={cx(["santa", ""])} />
+        {/* <img src={IMAGES.santa} alt="santaRef" ref={santaRef} className={cx(["santa", ""])} /> */}
         <img src={IMAGES.night_sea} alt="night-sea" className={cx(["sea", ""])} />
         {/* <TypeAnimation
           className={cx(["lblWelcome", "absolute z-[1] top-[50%] left-[50%] text-6xl"])}
@@ -57,7 +58,7 @@ export default function Home() {
         {/* <img src={IMAGES.bats} alt="bats" ref={bird1Ref} className={cx(["bird1", ""])} /> */}
         <TypeAnimation
           className={cx(["lblHolidays", "absolute z-[1] top-[50%] left-[50%] text-5xl text-center"])}
-          sequence={['MERRY CHRISTMAS', 0]}
+          sequence={['HAPPY NEW YEAR', 0]}
           speed={20}
           repeat={0}
           cursor={false}

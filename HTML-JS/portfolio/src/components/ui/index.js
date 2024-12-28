@@ -7,6 +7,7 @@ import ChatBot from "./ChatBotWidget/ChatBot";
 import ChatBotButton from "./ChatBotWidget/ChatBotButton";
 import { Dot } from "./DotAnimation";
 import { LightRope } from "./HolidayItems/ChristmasNoel";
+import Fireworks from "./HolidayItems/Fireworks";
 
 export {
   FishTank,
@@ -18,4 +19,5 @@ export {
   ChatBotButton,
   Dot,
   LightRope,
+  Fireworks,
 };
