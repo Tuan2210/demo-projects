@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import useDownloadCV from "@hooks/useDownloadCV";
 
 import { CV } from "@constants/url";
-import { Button } from "@components/ui";
+import { Button, Fireworks } from "@components/ui";
 
 import { Document, Page, pdfjs } from 'react-pdf';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
@@ -30,14 +30,15 @@ export default function PreviewCV() {
   };
 
   return (
-    <div className={cx(["preview-cv-container", "bg-preview-cv-noel bg-contain bg-top bg-no-repeat bg-black"])}>
+    <div className={cx(["preview-cv-container", "bg-black"])}>
       <nav className="h-fit p-4 flex items-center justify-between opacity-80 bg-[#070C1F] z-20">
         <Link to={"/"} className={cx(["font-mochiy", "p-2 outline-none hover:border-b hover:border-[cyan]"])}>
           <p className="text-[cyan]">Portfolio</p>
         </Link>
         <Button type="button" onClick={useDownloadCV()} startIcon={<FileDownloadIcon />}>Download CV</Button>
       </nav>
-      <div className="w-fit mx-auto p-12 pb-8 bg-[#dedede]">
+      <Fireworks className='absolute bottom-0 left-0 h-[80%] z-0' />
+      <div className="w-fit mx-auto p-12 pb-8 bg-black z-10">
         <Document file={CV} onLoadSuccess={onDocumentLoadSuccess}>
           {Array.apply(null, Array(numPages))
             .map((x, i) => i + 1)

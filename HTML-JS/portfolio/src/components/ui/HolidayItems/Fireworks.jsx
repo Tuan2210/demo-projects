@@ -1,7 +1,7 @@
 import jQuery from "jquery";
 import $ from "jquery";
 
-import React from "react";
+import React, { useEffect } from "react";
 
 // https://github.com/csudcy/jquery.fireworks + https://codepen.io/chientv16/pen/dyPXXJy
 /* example functionality */
@@ -308,6 +308,16 @@ $(document).ready(function () {
 
 
 // Fireworks component
-export default function Fireworks() {
-  return <div id="example" className="z-50 w-full h-screen"></div>
+export default function Fireworks({ className }) {
+  useEffect(() => {
+    const $example = $("#example");
+
+    if ($example.length) $example.fireworks();
+
+    return () => {
+      if ($example.length) $example.fireworks("destroy");
+    };
+  }, []);
+
+  return <div id="example" className={`w-full ${className}`}></div>
 }
