@@ -50,6 +50,7 @@ export default function PreviewCV() {
                   pageNumber={page}
                   renderTextLayer={false}
                   renderAnnotationLayer={false}
+                  scale={1.25}
                 />
               )
             })

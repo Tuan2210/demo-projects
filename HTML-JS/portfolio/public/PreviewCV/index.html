@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dinh Quang Tuan | Portfolio</title>
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+    <style>
+        @import url(../../src/components/GlobalStyles/GlobalStyles.scss);
+        .font-mochiy {
+            font-family: "Mochiy Pop One", sans-serif;
+        }
+
+        .fireworks {
+            width: 100%;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            height: 80%;
+            z-index: 0;
+        }
+        
+        nav {
+            height: fit-content;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            opacity: 0.8;
+            background-color: #070c1f;
+            z-index: 20;
+        }
+        
+        nav a {
+            padding: 0.5rem;
+            outline: none;
+            color: cyan;
+        }
+        
+        nav a:hover {
+            border-bottom: 1px solid cyan;
+        }
+        
+        nav a.downloadBtn {
+            width: fit-content;
+            padding: 0.4rem 1.85rem;
+            text-transform: none;
+            color: cyan;
+            border: solid 1px cyan;
+            border-radius: 7px;
+            background-color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 14px;
+        }
+        
+        nav a.downloadBtn:hover {
+            color: black;
+            background-color: cyan;
+            cursor: pointer;
+        }
+        
+        .material-icons {
+            font-size: 1.25rem;
+            color: cyan;
+        }
+        
+        nav a.downloadBtn:hover .material-icons {
+            color: black;
+        }
+        
+        .content {
+            width: 100%;
+            padding: 3rem 23% 3rem 23%;
+            margin: 0 auto;
+            background-color: #000;
+        }
+        
+        #pdfContainer {
+            position: relative;
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="preview-cv-container" style="background: #000">
+        <nav>
+            <a href="https://portfolio-dinh-quang-tuan.onrender.com" class="font-mochiy">
+                Portfolio
+            </a>
+            <a class="downloadBtn" href="/CV_DinhQuangTuan.pdf" download="CV_DinhQuangTuan.pdf">
+                <span class="material-icons">file_download</span>
+                Download CV
+            </a>
+        </nav>
+        <div class="content">
+            <div class="fireworks"></div>
+            <div id="pdfContainer" style="display: flex; flex-direction: column; gap: 1rem;"></div>
+        </div> 
+    </div>
+</body>
+
+<script type="module">
+    import * as pdfjsLib from "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.mjs";
+    
+    pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.worker.mjs";
+
+    const url = '/CV_DinhQuangTuan.pdf';
+    const container = document.getElementById("pdfContainer");
+  
+    pdfjsLib.getDocument(url).promise.then(pdf => {
+        const totalPages = pdf.numPages;
+
+        for (let pageNum = 1; pageNum <= totalPages; pageNum++) {
+            pdf.getPage(pageNum).then(page => {
+                const canvas = document.createElement("canvas");
+                container.appendChild(canvas);
+
+                const context = canvas.getContext("2d");
+                const viewport = page.getViewport({ scale: 1.25 });
+
+                canvas.width = viewport.width;
+                canvas.height = viewport.height;
+
+                page.render({ canvasContext: context, viewport: viewport });
+            });
+        }
+    });
+</script>
+
+<script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="./jquery.fireworks.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.fireworks').fireworks({
+            //sound: true, // sound effect
+            // opacity: 0.9,
+            width: '100%',
+            height: '100%'
+        });
+    })
+</script>
+
+</html>
