@@ -103,8 +103,8 @@
         }
         
         .content {
-            width: 100%;
-            padding: 3rem 23% 3rem 23%;
+            width: 50%;
+            padding: 3rem 0 3rem 0;
             margin: 0 auto;
             background-color: #000;
         }
@@ -113,11 +113,34 @@
             position: relative;
             z-index: 10;
         }
+
+        @media screen and (max-width: 1200px) {}
+        @media screen and (max-width: 992px) {
+            .preview-cv-container>div.content {
+                width: 70%;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .preview-cv-container>div.content {
+                width: 80%;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .preview-cv-container>div.content {
+                width: 85%;
+            }
+        }
+        @media screen and (max-width: 360px) {
+            .preview-cv-container>div.content {
+                width: 90%;
+            }
+
+        }
     </style>
 </head>
 
 <body>
-    <div class="preview-cv-container" style="background: #000">
+    <div class="preview-cv-container" style="width: 100%; background: #000">
         <nav>
             <a href="https://portfolio-dinh-quang-tuan.onrender.com" class="font-mochiy">
                 Portfolio
