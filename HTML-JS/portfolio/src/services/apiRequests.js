@@ -22,7 +22,7 @@ export const addPageVisit = async (pageVisitObj) => {
 
 export const fetchGeminiMsg = async (prompt) => {
   try {
-    const res = await axios.post(`${API_URL}/api/chatBot/Gemini2.0Flash`, prompt, { timeout: 5000 });
+    const res = await axios.post(`${API_URL}/api/chatBot/Gemini2.0Flash`, prompt);
     return res.data;
   } catch (error) {
     console.error("Error fetching Gemini 2.0 Flash", error);
