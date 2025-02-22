@@ -77,7 +77,7 @@ import "dotenv/config";
 
 const chatBotController = {
   fetchGeminiMsg: async (req, res) => {
-    const genAI = new GoogleGenerativeAI(`${process.env.VITE_GEMINI_KEY}`);
+    const genAI = new GoogleGenerativeAI(`${process.env.GEMINI_KEY}`); // no use VITE_GEMINI_KEY, use GEMINI_KEY in Environtment/Secret Files on Render
     const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
     const { prompt } = req.body;
@@ -89,7 +89,7 @@ const chatBotController = {
         data: result.response.text(),
       });
     } catch (error) {
-      console.error("Error:", error);
+      console.error("Gemini API Error:", error.response ? error.response.data : error.message);
       return res
         .status(500)
         .json({ message: "Error fetching API Gemini 2.0 Flash!" });
