@@ -1,8 +1,10 @@
-// import { Router } from "express";
-// import chatBotController from "../controllers/chatBotController.js";
+import { Router } from "express";
+import chatBotController from "../controllers/chatBotController.js";
 
-// const router = Router();
+const router = Router();
 
 // router.post("/completions", chatBotController.fetchChatGPT);
 
-// export default router;
+router.post("/Gemini2.0Flash", chatBotController.fetchGeminiMsg);
+
+export default router;

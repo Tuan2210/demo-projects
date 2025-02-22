@@ -1,5 +1,5 @@
+/* eslint-disable no-undef */
 // /* eslint-disable no-unused-vars */
-// /* eslint-disable no-undef */
 // import dotenv from "dotenv";
 // import path from "path";
 // import { fileURLToPath } from "url";
@@ -70,4 +70,31 @@
 //   },
 // };
 
-// export default chatBotController;
+// Google 2.0 Flash AI
+// https://ai.google.dev/gemini-api/docs?_gl=1*1v77msd*_ga*MjEyNjU3MTUxNi4xNzQwMDIzNTIw*_ga_P1DBVKWT6V*MTc0MDAyMzUyMC4xLjEuMTc0MDAyMzU0My4zNy4wLjE3ODAzODI5MDU.&hl=vi#node.js
+import { GoogleGenerativeAI } from "@google/generative-ai";
+import "dotenv/config";
+
+const chatBotController = {
+  fetchGeminiMsg: async (req, res) => {
+    const genAI = new GoogleGenerativeAI(`${process.env.VITE_GEMINI_KEY}`);
+    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+
+    const { prompt } = req.body;
+
+    try {
+      const result = await model.generateContent(prompt);
+      return res.status(200).json({
+        message: "Fetched API Gemini 2.0 Flash successfully",
+        data: result.response.text(),
+      });
+    } catch (error) {
+      console.error("Error:", error);
+      return res
+        .status(500)
+        .json({ message: "Error fetching API Gemini 2.0 Flash!" });
+    }
+  },
+};
+
+export default chatBotController;

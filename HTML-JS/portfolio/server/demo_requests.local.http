@@ -7,3 +7,11 @@ Content-Type: application/json
 
 ###
 GET http://localhost:3000/api/pageVisit/getPageVisit
+
+###
+POST http://localhost:3000/api/chatBot/Gemini2.0Flash
+Content-Type: application/json
+
+{
+    "prompt": "Hello"
+}
