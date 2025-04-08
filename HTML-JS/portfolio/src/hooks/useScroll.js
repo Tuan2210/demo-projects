@@ -12,6 +12,11 @@ const usePageScroll = () => {
   // christmas-noel
   const santaRef = useRef(null);
 
+  // 30/4 - 1/5
+  const eagle1Ref = useRef(null);
+  const eagle2Ref = useRef(null);
+  const fighterFalconRef = useRef(null);
+
   useEffect(() => {
     const handleScroll = () => {
       const pageHeight = document.documentElement.scrollHeight;
@@ -45,6 +50,19 @@ const usePageScroll = () => {
           santaRef.current.style.top = `${55 - valueY * 0.2}%`;
           santaRef.current.style.left = `${-20 - valueY * -0.3}%`;
         }
+
+        if (eagle1Ref.current && eagle2Ref.current) {
+          eagle1Ref.current.style.top = `${-5 - valueY * 0.3}%`;
+          eagle1Ref.current.style.left = `${2 + valueY * 0.5}%`;
+
+          eagle2Ref.current.style.top = `${-valueY * 0.3}%`;
+          eagle2Ref.current.style.left = `${valueY * 0.5}%`;
+        }
+
+        if (fighterFalconRef.current) {
+          fighterFalconRef.current.style.top = `${25 - valueY * 0.3}%`;
+          fighterFalconRef.current.style.left = `${70 - valueY * 0.4}%`;
+        }
       }
     };
 
@@ -63,6 +81,9 @@ const usePageScroll = () => {
     bird2Ref,
     bird3Ref,
     santaRef,
+    eagle1Ref,
+    eagle2Ref,
+    fighterFalconRef,
   };
 };
 

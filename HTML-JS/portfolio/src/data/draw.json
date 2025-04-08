@@ -1,18 +1,18 @@
 [
   {
-    "image": "https://portfolio-dqt.s3.ap-southeast-1.amazonaws.com/drawing/draw-shenron-2024.png",
-    "image_back": "https://portfolio-dqt.s3.ap-southeast-1.amazonaws.com/drawing/draw-bp.jpg"
+    "image": "https://res.cloudinary.com/dpyhpvmoz/image/upload/v1744087942/portfolio-dqt/drawing/draw-shenron-2024.png",
+    "image_back": "https://res.cloudinary.com/dpyhpvmoz/image/upload/v1744087941/portfolio-dqt/drawing/draw-bp.jpg"
   },
   {
-    "image": "https://portfolio-dqt.s3.ap-southeast-1.amazonaws.com/drawing/draw-ae.jpg",
-    "image_back": "https://portfolio-dqt.s3.ap-southeast-1.amazonaws.com/drawing/draw-conan.png"
+    "image": "https://res.cloudinary.com/dpyhpvmoz/image/upload/v1744087940/portfolio-dqt/drawing/draw-ae.jpg",
+    "image_back": "https://res.cloudinary.com/dpyhpvmoz/image/upload/v1744087941/portfolio-dqt/drawing/draw-conan.png"
   },
   {
-    "image": "https://portfolio-dqt.s3.ap-southeast-1.amazonaws.com/drawing/draw-vn-girl.png",
-    "image_back": "https://portfolio-dqt.s3.ap-southeast-1.amazonaws.com/drawing/draw-handsome-world-horse.jpg"
+    "image": "https://res.cloudinary.com/dpyhpvmoz/image/upload/v1744087942/portfolio-dqt/drawing/draw-vn-girl.png",
+    "image_back": "https://res.cloudinary.com/dpyhpvmoz/image/upload/v1744087941/portfolio-dqt/drawing/draw-handsome-world-horse.jpg"
   },
   {
-    "image": "https://portfolio-dqt.s3.ap-southeast-1.amazonaws.com/drawing/draw-wolverine-dp.jpg",
-    "image_back": "https://portfolio-dqt.s3.ap-southeast-1.amazonaws.com/drawing/draw-jotaro-star-platinum.jpg"
+    "image": "https://res.cloudinary.com/dpyhpvmoz/image/upload/v1744087942/portfolio-dqt/drawing/draw-wolverine-dp.jpg",
+    "image_back": "https://res.cloudinary.com/dpyhpvmoz/image/upload/v1744087941/portfolio-dqt/drawing/draw-jotaro-star-platinum.jpg"
   }
 ]

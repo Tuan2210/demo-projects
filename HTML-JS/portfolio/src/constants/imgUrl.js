@@ -1,25 +1,31 @@
-const s3Url = "https://portfolio-dqt.s3.ap-southeast-1.amazonaws.com/";
+const cloudinaryUrl = "https://res.cloudinary.com/dpyhpvmoz/image/upload";
 const IMAGES = {
-  night_sky: s3Url + "night-sky-no-stars.jpg",
-  stars: s3Url + "stars.png",
-  moon: s3Url + "moon.png",
-  flying_bird1: s3Url + "flying-bird-1.gif",
-  flying_bird2: s3Url + "flying-bird-2.gif",
-  night_sea: s3Url + "night-sea.png",
-  avatar: s3Url + "DinhQuangTuan.png",
-  dev: s3Url + "dev.png",
-  vnFlag: s3Url + "vn-flag.gif ",
-  seabed: s3Url + "seabed-resize.png",
-  algae: s3Url + "algae.gif",
-  eve: s3Url + "eve-chat-bot.png",
+  night_sky: `${cloudinaryUrl}/v1744087944/portfolio-dqt/night-sky-no-stars.jpg`,
+  stars: `${cloudinaryUrl}/v1744087945/portfolio-dqt/stars.png`,
+  moon: `${cloudinaryUrl}/v1744087944/portfolio-dqt/moon.png`,
+  flying_bird1: `${cloudinaryUrl}/v1744087942/portfolio-dqt/flying-bird-1.gif`,
+  flying_bird2: `${cloudinaryUrl}/v1744087943/portfolio-dqt/flying-bird-2.gif`,
+  night_sea: `${cloudinaryUrl}/v1744087944/portfolio-dqt/night-sea.png`,
+  avatar: `${cloudinaryUrl}/v1744087941/portfolio-dqt/DinhQuangTuan.png`,
+  dev: `${cloudinaryUrl}/v1744087940/portfolio-dqt/dev.png`,
+  vnFlag: `${cloudinaryUrl}/v1744087946/portfolio-dqt/vn-flag.gif`,
+  seabed: `${cloudinaryUrl}/v1744087945/portfolio-dqt/seabed.png`,
+  algae: `${cloudinaryUrl}/v1744087940/portfolio-dqt/algae.gif`,
+  eve: `${cloudinaryUrl}/v1744087942/portfolio-dqt/eve-chat-bot.png`,
 
   // halloween
-  // bats: s3Url + "halloween/bats.gif",
-  // hlwLights: s3Url + "halloween/hlw-string-lights.gif",
+  // bats: `${cloudinaryUrl}/v1744087943/portfolio-dqt/Halloween/bats.gif`,
+  // hlwLights: `${cloudinaryUrl}/v1744087943/portfolio-dqt/Halloween/hlw-string-lights.gif`,
   ////
 
   // christmas noel
-  santa: s3Url + "christmas-noel/santa-reindeer.gif",
+  // santa: `${cloudinaryUrl}/v1744087945/portfolio-dqt/Christmas-Noel/santa-reindeer.gif`,
+  ////
+
+  // 30/4 - 1/5
+  eagle1: `${cloudinaryUrl}/v1744087943/portfolio-dqt/helicopter.gif`,
+  eagle2: `${cloudinaryUrl}/v1744087943/portfolio-dqt/helicopter.gif`,
+  fighterFalcon: `${cloudinaryUrl}/v1744087942/portfolio-dqt/fighter.gif`,
 };
 
 export default IMAGES;
